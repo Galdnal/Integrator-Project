@@ -54,7 +54,7 @@ O Richard entrou no time
 
 ### 🗓️ Reunião 4: Alinhamento Geral (22/06/2026)
 
-Nós nos reunimos para revisar o rumo das coisas.
+Nós nos reunimos para revisar 
 
 * **Faltas:** Júlia e Richard (não justificado).
 
@@ -62,6 +62,6 @@ Nós nos reunimos para revisar o rumo das coisas.
 
 ### 🗓️ Reunião 5: Código e Design (06/07/2026)
 
-Nós nos reunimos para dividir o grupo em duas frentes de trabalho práticas.
+Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layout
 
 * **O que fizemos:** Nós tivemos uma conversa geral para alinhar como o trabalho seria montado. Logo depois, dividimos as tarefas: Livia, Guilherme e Philip começaram a criar a estrutura do código no VS Code. Enquanto isso, Júlia, Richard e Ryan ficaram no Figma ajustando os últimos detalhes do visual e do layout.
