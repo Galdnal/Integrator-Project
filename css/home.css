@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rye&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C3AE86;
+    font-family: 'Fahkwang', serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.site-container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.banner-container {
+    display: block;
+    text-align: center;
+    background-color: #C3AE86;
+    padding: 15px 40px 25px 40px;
+
+    font-family: 'Rye', serif;
+    font-size: 4.8rem;
+    color: #48200A;
+    text-shadow: 1px 1px 0px #1a1512;
+    white-space: nowrap;
+    width: max-content;
+
+    text-decoration: underline;
+    text-decoration-color: #48200A;
+    text-decoration-thickness: 6px;
+    text-underline-offset: 14px;
+    text-decoration-skip-ink: auto;
+}
+
+.ampersand {
+    font-family: 'Rye', serif;
+    font-style: italic;
+    font-size: 4.8rem;
+
+}
+
+.menu-principal {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #1a1512;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    background-color: #C3AE86;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #1a1512;
+    font-size: 1.15rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.menu-principal a:hover {
+    opacity: 0.7;
+}
+
+.menu-principal a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.conteudo-principal {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #1a1512;
+    border-right: 2px solid #1a1512;
+    padding: 0 15px;
+}
+
+.titulo-coluna {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #48200A;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.caixa-texto {
+    background-color: #562E0C;
+    color: #EDE8D0;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.coluna-central {
+    flex: 1.8;
+    display: flex;
+}
+
+.moldura-imagem {
+    width: 100%;
+    min-height: 350px;
+    border: 2px solid #1a1512;
+    background-color: #C3AE86;
+}
