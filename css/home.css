@@ -2,18 +2,6 @@
 
 
 
-.header{
-
-    margin:0;
-
-    width:100%;
-
-    height:100%;
-
-}
-
-
-
 body{
 
     font-family: Georgia, serif;
@@ -40,69 +28,41 @@ header{
 
 }
 
-
-
 nav ul{
-
     display: flex;
-
     justify-content: center;
-
     list-style: none;
-
     gap: 40px;
-
     padding: 18px;
-
 }
-
-
-
 nav a{
-
     color: rgb(255, 255, 255);
-
     font-size: 18px;
-
 }
-
-
-
 nav a:hover{
-
     color: #d4b38c;
-
-
-
 }
-
-
+.atual{
+    text-decoration: underline;
+}
 
 /* BANNER */
 
-
-
 .banner{
-
-    height: 400px;
-
-
-
-    background-image: url("../src/Rectangle 4.svg");
-
-    background-size: cover;
-
-    background-position: center;
-
-
-
+    position: relative;
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
 }
+
+.banner img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+}
+ 
 
 
 
