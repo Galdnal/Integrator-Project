@@ -65,3 +65,7 @@ Nós nos reunimos para revisar
 Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layout
 
 * **O que fizemos:** Nós tivemos uma conversa geral para alinhar como o trabalho seria montado. Logo depois, dividimos as tarefas: Livia, Guilherme e Philip começaram a criar a estrutura do código no VS Code. Enquanto isso, Júlia, Richard e Ryan ficaram no Figma ajustando os últimos detalhes do visual e do layout.
+
+### 🗓️ Reunião 6: Código e Design (10/08/2026)
+* **Falta:** Richard (sem justificativa) e Ryan (teve consulta médica).
+* Júlia, Ryan e livia refizeram o figma, Richard iniciou o código e Philip refez o código, concluindo a pagína inicial do projeto e o Guilherme criou o instagram. 
