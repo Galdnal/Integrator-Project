@@ -67,7 +67,8 @@ nav a:hover{
 
 
 .banner h1{
-
+    margin: 6vw;
+    
     color: white;
 
     font-size: 60px;
