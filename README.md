@@ -68,4 +68,10 @@ Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layo
 
 ### 🗓️ Reunião 6: Código e Design (10/08/2026)
 * **Falta:** Richard (sem justificativa) e Ryan (teve consulta médica).
-* Júlia, Ryan e livia refizeram o figma, Richard iniciou previamente o código e Philip refez o código, concluindo a pagína inicial do projeto e o Guilherme criou o instagram. 
+* Júlia, Ryan e livia refizeram o figma, Richard iniciou previamente o código e Philip refez o código, concluindo a pagína inicial do projeto e o Guilherme criou o instagram.
+
+* ### 🗓️ Reunião 7: Código e Design (17/08/2026)
+* **Falta:**  Ryan(teve consulta médica).
+* Júlia e livia mexeram no figm. Richard, Philip e guilherme mexerem no codígo (e o github saiu do ar e voltou no final da aula).
+* 
+
