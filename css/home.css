@@ -221,7 +221,7 @@ footer a img {
 
   footer {
     height: 100px;
-
+    padding-bottom: 40vw;
     margin-top: 60px;
   }
 }
