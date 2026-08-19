@@ -140,7 +140,7 @@ h2 {
 /* RODAPÉ */
 
 footer {
-  height: 120px;
+  height: 100%;
 
   background: #c98f64;
 
@@ -222,7 +222,7 @@ footer a img {
   }
 
   footer {
-    height: 100px;
+    height: 100%;
     padding-bottom: 40vw;
     margin-top: 60px;
   }
