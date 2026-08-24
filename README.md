@@ -44,7 +44,7 @@ Nós continuamos a pesquisar esse tema.
 
 * **O que cada um fez:** O Ryan continuou a pesquisar as grandes religiões do mundo, e o Philip começou a mapear as mitologias. A Livia trouxe os conceitos base que todo mundo precisa saber e, junto com a Júlia, buscou referências de sites prontos para nos inspirar.
 
-### 🗓️ Reunião 3: Novo integrante (15/06/2026)
+### 🗓️ Reunião 3: Novo integrante (15/06/2026)/conceitos
 
 O Richard entrou no time
 
@@ -68,10 +68,13 @@ Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layo
 
 ### 🗓️ Reunião 6: Código e Design (10/08/2026)
 * **Falta:** Richard (sem justificativa) e Ryan (teve consulta médica).
-* Júlia, Ryan e livia refizeram o figma, Richard iniciou previamente o código e Philip refez o código, concluindo a pagína inicial do projeto e o Guilherme criou o instagram.
+* **O que fizemos:** Júlia, Ryan e livia refizeram o figma, Richard iniciou previamente o código e Philip refez o código, concluindo a pagína inicial do projeto e o Guilherme criou o instagram.
 
 * ### 🗓️ Reunião 7: Código e Design (17/08/2026)
 * **Falta:**  Ryan(teve consulta médica).
-* Júlia e livia mexeram no figm. Richard, Philip e guilherme mexerem no codígo (e o github saiu do ar e voltou no final da aula).
-* 
+* **O que fizemos:** Júlia e livia mexeram no figma. Richard, Philip e guilherme mexerem no codígo (e o github saiu do ar e voltou no final da aula).
+* passada o Richard fez o css da segunda e terceira página.
 
+* ### 🗓️ Reunião 7: Código e Design (24/08/2026)
+* **Falta:** sem faltas hoje.
+*  **O que fizemos:** Ryan e Richard buscaram ideias referências para posts no instagram do site, Guilherme fez o wireframe(rascunho), Júlia e Philip fizeram o figma e mais pesquisa, e Livia fez no css.
