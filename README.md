@@ -75,6 +75,6 @@ Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layo
 * **O que fizemos:** Júlia e livia mexeram no figma. Richard, Philip e guilherme mexerem no codígo (e o github saiu do ar e voltou no final da aula).
 * passada o Richard fez o css da segunda e terceira página.
 
-* ### 🗓️ Reunião 7: Código e Design (24/08/2026)
+* ### 🗓️ Reunião 8: Código e Design (24/08/2026)
 * **Falta:** sem faltas hoje.
 *  **O que fizemos:** Ryan e Richard buscaram ideias referências para posts no instagram do site, Guilherme fez o wireframe(rascunho), Júlia e Philip fizeram o figma e mais pesquisa, e Livia fez no css.
