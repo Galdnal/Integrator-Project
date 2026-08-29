@@ -78,3 +78,9 @@ Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layo
 * ### 🗓️ Reunião 8: Código e Design (24/08/2026)
 * **Falta:** sem faltas hoje.
 *  **O que fizemos:** Ryan e Richard buscaram ideias referências para posts no instagram do site, Guilherme fez o wireframe(rascunho), Júlia e Philip fizeram o figma e mais pesquisa, e Livia fez no css.
+
+
+* ### 🗓️ Reunião 9: Código e Design (29/08/2026)
+
+*  **Falta:** Richard e Ryan(sem justificativa)
+*  **o que fizemos:**Júlia e Livia estavam trabalhando no figma, Philip estava mexendo no código do css e do Html e o Guilherme estava fazendo o wireframe(rascunho)
