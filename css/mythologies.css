@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@300;400;500;600&family=Rye&display=swap");
+
+body {
+    font-family: Georgia, serif;
+    background: #f0e4c9;
+    margin: 0;
+}
+
+
+/* MENU */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 12px 30px;
+    margin: 0;
+
+    list-style: none;
+
+    background-color: rgba(110, 60, 38, 0.85);
+
+    border-radius: 50px;
+}
+
+header nav a {
+    color: #f5e9d4;
+
+    text-decoration: none;
+
+    font-size: 1.1rem;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+header nav a.atual {
+    text-decoration: underline;
+
+    text-underline-offset: 5px;
+
+    font-weight: bold;
+}
+
+
+/* BANNER */
+
+.banner {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 300px;
+
+    overflow: hidden;
+}
+
+.banner img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+.banner h1 {
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: 70px;
+
+    color: #43220f;
+
+    font-size: 55px;
+
+    text-shadow: 2px 2px 10px black;
+
+    -webkit-text-stroke-color: #ede8d0;
+    -webkit-text-stroke-width: 1px;
+}
+
+
+/* OVERVIEW */
+
+.overview {
+    text-align: center;
+
+    font-family: "Fahkwang", sans-serif;
+
+    padding: 10px 30px;
+}
+
+.overview h3 {
+    color: #43220f;
+
+    font-size: 28px;
+
+    margin: 0;
+    padding: 5px;
+}
+
+.overview p {
+    max-width: 850px;
+
+    margin: auto;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+}
+
+
+/* LINHA AMARELA */
+
+.linha-amarela {
+    border: none;
+
+    height: 2px;
+
+    background-color: #d4b200;
+
+    width: 100%;
+
+    margin: 5px auto;
+}
+
+
+/* MAIN */
+
+main h2 {
+    text-align: center;
+
+    font-size: 30px;
+
+    color: #43220f;
+
+    margin: 10px 0;
+}
+
+
+/* CARD DA MITOLOGIA GREGA */
+
+.card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background-color: #bc8c5f;
+
+    margin: 10px 0;
+
+    padding: 15px 40px;
+}
+
+.card img {
+    width: 170px;
+    height: 130px;
+
+    object-fit: cover;
+}
+
+.greek-text {
+    flex: 1;
+
+    text-align: left;
+}
+
+.greek-text h4 {
+    color: #67371e;
+
+    font-size: 22px;
+
+    margin: 0 0 10px;
+}
+
+.greek-text p {
+    color: #ede8d0;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    margin: 0;
+}
+
+
+/* GERAÇÕES DIVINAS */
+
+.gen {
+    text-align: center;
+}
+
+.gen h2 {
+    margin-top: 10px;
+}
+
+.gen h3 {
+    text-align: center;
+
+    font-size: 23px;
+
+    color: #67371e;
+
+    margin: 5px 0;
+}
+
+
+/* CAOS */
+
+.gen > img {
+    width: 120px;
+    height: 140px;
+
+    object-fit: cover;
+
+    margin: 10px auto;
+}
+
+.gen > h4 {
+    color: #43220f;
+
+    font-size: 15px;
+
+    margin: 3px;
+}
+
+
+/* DEUSES */
+
+.deuses {
+    display: flex;
+
+    grid-template-columns: repeat(5, 100px);
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 15px auto;
+}
+
+.deuses div {
+    text-align: center;
+}
+
+.deuses img {
+    width: 80px;
+    height: 100px;
+
+    object-fit: cover;
+
+    margin: auto;
+}
+
+.deuses h4 {
+    color: #43220f;
+
+    font-size: 12px;
+
+    margin: 5px 0 2px;
+}
+
+.deuses p {
+    color: #67371e;
+
+    font-size: 9px;
+
+    margin: 0;
+}
+
+
+/* URANO */
+
+.urano {
+    text-align: center;
+
+    margin: 15px auto;
+}
+
+.urano img {
+    width: 80px;
+    height: 100px;
+
+    object-fit: cover;
+
+    margin: auto;
+}
+
+.urano h4 {
+    font-size: 12px;
+
+    margin: 5px;
+}
+
+.urano p {
+    font-size: 9px;
+
+    margin: 0;
+}
+
+
+/* TEXTOS MARRONS */
+
+.texto {
+    display: flex;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background-color: #805335;
+
+    color: #f5e9d4;
+
+    padding: 20px 60px;
+
+    margin: 15px 0;
+
+    font-family: "Fahkwang", sans-serif;
+}
+
+.texto p {
+    max-width: 900px;
+
+    margin: auto;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.texto img{
+    padding: 9px;
+    width:300px;
+    height:200px;
+}
+
+.texto-amarelo {
+    text-align: left;
+
+    display: flex;
+
+    box-sizing: border-box;
+
+    background-color: #BE843C;
+
+    color: #f5e9d4;
+
+    padding: 20px 60px;
+
+    margin: 15px 0;
+
+    font-family: "Fahkwang", sans-serif;
+}
+.texto-amarelo img{
+    width: 300px;
+    height:200px;
+}
+
+/* TITÃS */
+
+.gen .titan {
+    display: grid;
+
+    grid-template-columns: repeat(3, 100px);
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 15px auto;
+}
+
+.titan h4 {
+    color: #43220f;
+
+    font-size: 12px;
+
+    margin: 5px 0 2px;
+}
+
+.titan p {
+    color: #67371e;
+
+    font-size: 9px;
+
+    margin: 0;
+}
+
+
+/* OLÍMPICOS */
+
+.gen .deuses:last-of-type {
+    grid-template-columns: repeat(4, 100px);
+
+    gap: 30px;
+
+    width: fit-content;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    width: 100%;
+
+    background: #8a4e2f;
+
+    margin-top: 50px;
+
+    padding: 40px 20px 100px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+footer p {
+    color: #f5f5dc;
+
+    font-size: 16px;
+
+    font-family: "Fahkwang", sans-serif;
+
+    font-style: italic;
+}
+
+footer a img {
+    width: 40px;
+
+    margin: auto;
+}
