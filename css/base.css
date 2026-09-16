@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rye&display=swap");
+
+/*
+  base.css
+  Estilos compartilhados por TODAS as páginas: paleta de cores, header,
+  footer, animações e o pequeno reset de layout que toda página usa.
+  Cada página (home.css, conection.css, concepts.css, mythologies.css)
+  deve importar este arquivo antes do seu próprio CSS e conter apenas
+  o que é específico dela.
+*/
+
+:root {
+  --marrom-escuro: #43220f;
+  --marrom-medio: #67371e;
+  --marrom-card: #bc8c5f;
+  --marrom-texto: #805335;
+  --marrom-texto-claro: #be843c;
+  --marrom-header: rgba(110, 60, 38, 0.85);
+  --marrom-footer: #8a4e2f;
+  --creme: #f5e9d4;
+  --creme-fundo: #f0e4c9;
+  --amarelo-linha: #d4b200;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: var(--creme-fundo);
+  margin: 0;
+
+  animation: entradaPagina 0.8s ease both;
+}
+
+/* MENU (igual em todas as páginas) */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding: 20px 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  animation: entrada 0.8s ease both;
+}
+
+header nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  width: fit-content;
+  max-width: 900px;
+
+  padding: 12px 30px;
+  margin: 0;
+
+  list-style: none;
+
+  background-color: var(--marrom-header);
+
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header nav a {
+  color: var(--creme);
+
+  text-decoration: none;
+
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+
+  transition: opacity 0.3s ease;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+header nav a.atual {
+  text-decoration: underline;
+
+  text-underline-offset: 5px;
+
+  font-weight: bold;
+}
+
+/* RODAPÉ (igual em todas as páginas) */
+
+footer {
+  background-color: var(--marrom-footer);
+  color: #fff;
+  text-align: center;
+
+  padding: 45px 20px 25px;
+
+  border-top: 1px solid #444;
+
+  margin-top: 50px;
+
+  animation: entrada 0.8s ease both;
+}
+
+footer h2 {
+  color: #fff;
+
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+
+  text-transform: uppercase;
+}
+
+footer p {
+  color: #fff;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  margin-bottom: 30px;
+
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #aaa;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+}
+
+footer p:last-child {
+  border-top: 1px solid #fff;
+
+  padding-top: 20px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 12px;
+}
+
+/* ANIMAÇÕES (usadas por todas as páginas) */
+
+@keyframes entradaPagina {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entradaBanner {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes entradaImagem {
+  from {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes entradaCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes saidaPagina {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+body.saindo {
+  animation: saidaPagina 0.6s ease forwards;
+}
+
+/* CELULAR: o menu quebra em várias linhas igual em toda página */
+
+@media only screen and (max-width: 600px) {
+  header nav ul {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 11px;
+  }
+}
+
+/* REDUZIR ANIMAÇÕES (acessibilidade, igual em toda página) */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

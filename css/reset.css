@@ -152,21 +152,6 @@ menu {
       This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-/* ============ REMOVI
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block; 
-  vertical-align: middle;
-}
-
-*/
-
 /*
   Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
