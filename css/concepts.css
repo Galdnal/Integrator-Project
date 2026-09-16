@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rye&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #f0e4c9;
+  margin: 0;
+  animation: entradaPagina 0.8s ease both;
+}
+
+/* MENU */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: entrada 0.8s ease both;
+}
+
+header nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  width: fit-content;
+  max-width: 900px;
+  padding: 12px 30px;
+  margin: 0;
+  list-style: none;
+  background-color: rgba(110, 60, 38, 0.85);
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header nav a {
+  color: #f5e9d4;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  transition: opacity 0.2s ease;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+header nav a.atual {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-weight: bold;
+}
+
+/* BANNER */
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  animation: entradaBanner 1s ease both;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  margin-bottom: 20px;
+  animation: entradaImagem 1.2s ease both;
+}
+
+.banner h1 {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  color: #43220f;
+  font-size: 60px;
+  text-shadow: 2px 2px 10px black;
+  -webkit-text-stroke-color: #ede8d0;
+  -webkit-text-stroke-width: 1px;
+  animation: entrada 1s ease 0.2s both;
+}
+
+/* TIMELINE */
+
+.timeline-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 40px;
+  width: 90%;
+  max-width: 1100px;
+  padding: 20px;
+  position: relative;
+  margin: 0 auto;
+  animation: entrada 1s ease 0.3s both;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background-color: #cbb81b;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: entradaCard 0.8s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.card ul {
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.card-1 {
+  background-color: #aa8171;
+  animation-delay: 0.4s;
+}
+
+.card-2 {
+  background-color: #6a4433;
+  animation-delay: 0.5s;
+}
+
+.card-3 {
+  background-color: #b5a098;
+  animation-delay: 0.6s;
+}
+
+.card-4 {
+  background-color: #42322d;
+  animation-delay: 0.7s;
+}
+
+/* RODAPÉ */
+
+footer {
+  background-color: #8a4e2f;
+  color: #fff;
+  text-align: center;
+  padding: 45px 20px 25px;
+  border-top: 1px solid #444;
+  margin-top: 50px;
+  animation: entrada 1s ease 0.5s both;
+}
+
+footer h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+footer p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 30px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #aaa;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+}
+
+footer p:last-child {
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes entradaPagina {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entradaBanner {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes entradaImagem {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes entradaCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SAÍDA DA PÁGINA */
+
+@keyframes saidaPagina {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+body.saindo {
+  animation: saidaPagina 0.6s ease forwards;
+}
+
+/* TABLET */
+
+@media only screen and (max-width: 890px) {
+  header nav ul {
+    gap: 10px;
+    padding: 17px;
+  }
+}
+
+/* CELULAR */
+
+@media only screen and (max-width: 600px) {
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 11px;
+    margin: 0 auto;
+  }
+
+  .banner {
+    width: 100%;
+  }
+
+  .banner h1 {
+    font-size: 35px;
+    text-align: center;
+    padding: 0 15px;
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+
+  .timeline-container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 25px;
+    width: 90%;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+
+  .card {
+    min-width: 0;
+    padding: 15px;
+    overflow-wrap: break-word;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card p,
+  .card li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  footer {
+    height: 100%;
+    margin-top: 60px;
+  }
+}
+
+/* REDUZ ANIMAÇÕES SE O USUÁRIO PREFERIR */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
