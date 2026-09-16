@@ -1,802 +1,674 @@
 @import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@300;400;500;600&family=Rye&display=swap");
 
+:root {
+  /* Paleta de cores — centralizada para facilitar manutenção */
+  --marrom-escuro: #43220f;
+  --marrom-medio: #67371e;
+  --marrom-card: #bc8c5f;
+  --marrom-texto: #805335;
+  --marrom-texto-claro: #be843c;
+  --marrom-header: rgba(110, 60, 38, 0.85);
+  --marrom-footer: #8a4e2f;
+  --creme: #f5e9d4;
+  --creme-fundo: #f0e4c9;
+  --amarelo-linha: #d4b200;
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Georgia, serif;
-    background: #f0e4c9;
-    margin: 0;
+  font-family: Georgia, serif;
+  background: var(--creme-fundo);
+  margin: 0;
 
-    animation: entradaPagina 0.8s ease both;
+  animation: entradaPagina 0.8s ease both;
 }
-
 
 /* MENU */
 
 header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-    padding: 20px 0;
+  padding: 20px 0;
 
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    z-index: 10;
+  z-index: 10;
 
-    animation: entrada 0.8s ease both;
+  animation: entrada 0.8s ease both;
 }
 
 header nav ul {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 
-    width: fit-content;
+  width: fit-content;
 
-    padding: 12px 30px;
-    margin: 0;
+  padding: 12px 30px;
+  margin: 0;
 
-    list-style: none;
+  list-style: none;
 
-    background-color: rgba(110, 60, 38, 0.85);
+  background-color: var(--marrom-header);
 
-    border-radius: 50px;
+  border-radius: 50px;
 }
 
 header nav a {
-    color: #f5e9d4;
+  color: var(--creme);
 
-    text-decoration: none;
+  text-decoration: none;
 
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 
-    transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 header nav a:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 header nav a.atual {
-    text-decoration: underline;
+  text-decoration: underline;
 
-    text-underline-offset: 5px;
+  text-underline-offset: 5px;
 
-    font-weight: bold;
+  font-weight: bold;
 }
-
 
 /* BANNER */
 
 .banner {
-    position: relative;
+  position: relative;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
-    height: 300px;
+  width: 100%;
+  height: 300px;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    animation: entradaBanner 1s ease both;
+  animation: entradaBanner 1s ease both;
 }
 
 .banner img {
-    position: absolute;
+  position: absolute;
 
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    object-fit: cover;
+  object-fit: cover;
 
-    z-index: 0;
+  z-index: 0;
 
-    animation: entradaImagem 1.2s ease both;
+  animation: entradaImagem 1.2s ease both;
 }
 
 .banner h1 {
-    position: relative;
+  position: relative;
 
-    z-index: 1;
+  z-index: 1;
 
-    margin-top: 70px;
+  margin-top: 70px;
 
-    color: #43220f;
+  color: var(--marrom-escuro);
 
-    font-size: 55px;
+  font-family: "Rye", Georgia, serif;
+  font-size: 55px;
 
-    text-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 10px black;
 
-    -webkit-text-stroke-color: #ede8d0;
-    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ede8d0;
+  -webkit-text-stroke-width: 1px;
 
-    animation: entrada 1s ease 0.2s both;
+  animation: entrada 1s ease 0.2s both;
 }
-
 
 /* OVERVIEW */
 
 .overview {
-    text-align: center;
+  text-align: center;
 
-    font-family: "Fahkwang", sans-serif;
+  font-family: "Fahkwang", sans-serif;
 
-    padding: 10px 30px;
+  padding: 10px 30px;
 
-    animation: entrada 0.8s ease 0.3s both;
+  animation: entrada 0.8s ease 0.3s both;
 }
 
-.overview h3 {
-    color: #43220f;
+.overview h2 {
+  color: var(--marrom-escuro);
 
-    font-size: 28px;
+  font-size: 28px;
 
-    margin: 0;
-    padding: 5px;
+  margin: 0;
+  padding: 5px;
 }
 
 .overview p {
-    max-width: 850px;
+  max-width: 850px;
 
-    margin: auto;
+  margin: auto;
 
-    font-size: 15px;
+  font-size: 15px;
 
-    line-height: 1.4;
+  line-height: 1.4;
 }
-
 
 /* LINHA AMARELA */
 
 .linha-amarela {
-    border: none;
+  border: none;
 
-    height: 2px;
+  height: 2px;
 
-    background-color: #d4b200;
+  background-color: var(--amarelo-linha);
 
-    width: 100%;
+  width: 100%;
 
-    margin: 5px auto;
+  margin: 5px auto;
 
-    animation: entrada 0.8s ease 0.4s both;
+  animation: entrada 0.8s ease 0.4s both;
 }
-
 
 /* MAIN */
 
 main h2 {
-    text-align: center;
+  text-align: center;
 
-    font-size: 30px;
+  font-size: 30px;
 
-    color: #43220f;
+  color: var(--marrom-escuro);
 
-    margin: 10px 0;
+  margin: 10px 0;
 
-    animation: entrada 0.8s ease both;
+  animation: entrada 0.8s ease both;
 }
-
 
 /* CARD DA MITOLOGIA GREGA */
 
 .card {
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    gap: 25px;
+  gap: 25px;
 
-    width: 100%;
+  width: 100%;
 
-    background-color: #bc8c5f;
+  background-color: var(--marrom-card);
 
-    margin: 10px 0;
+  margin: 10px 0;
 
-    padding: 15px 40px;
+  padding: 15px 40px;
 
-    animation: entradaCard 0.8s ease both;
+  animation: entradaCard 0.8s ease both;
 }
 
 .card img {
-    width: 170px;
-    height: 130px;
+  width: 170px;
+  height: 130px;
 
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .greek-text {
-    flex: 1;
+  flex: 1;
 
-    text-align: left;
+  text-align: left;
 }
 
-.greek-text h4 {
-    color: #67371e;
+.greek-text h3 {
+  color: var(--marrom-medio);
 
-    font-size: 22px;
+  font-size: 22px;
 
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 .greek-text p {
-    color: #ede8d0;
+  color: var(--creme);
 
-    font-size: 15px;
+  font-size: 15px;
 
-    line-height: 1.4;
+  line-height: 1.4;
 
-    margin: 0;
+  margin: 0;
 }
-
 
 /* GERAÇÕES DIVINAS */
 
 .gen {
-    text-align: center;
+  text-align: center;
 
-    animation: entrada 0.8s ease both;
-}
-
-.gen h2 {
-    margin-top: 10px;
+  animation: entrada 0.8s ease both;
 }
 
 .gen h3 {
-    text-align: center;
-
-    font-size: 23px;
-
-    color: #67371e;
-
-    margin: 5px 0;
-}
-
-
-/* CAOS */
-
-.gen img {
-    width: 140px;
-    height: 180px;
-
-    object-fit: cover;
-
-    margin: 10px auto;
+  margin-top: 10px;
 }
 
 .gen h4 {
-    color: #43220f;
+  text-align: center;
 
-    font-size: 19px;
+  font-size: 23px;
 
-    margin: 3px;
+  color: var(--marrom-medio);
+
+  margin: 5px 0;
 }
 
+/* CAOS */
 
-/* DEUSES */
+.gen > img {
+  width: 140px;
+  height: 180px;
 
-.deuses {
-    display: grid;
-    grid-template-columns: repeat(5, 180px);
-    justify-content: center;
+  object-fit: cover;
 
-    gap: 25px;
-
-    margin: 15px auto;
-
-    animation: entradaCard 0.8s ease both;
+  margin: 10px auto;
 }
 
-.deuses div {
-    text-align: center;
+.gen > h5 {
+  color: var(--marrom-escuro);
 
-    width: 190px;
+  font-size: 19px;
+
+  margin: 3px;
 }
 
-.deuses img {
-    width: 180px;
-    height: 230px;
+/* GRID ÚNICO — reaproveitado por deuses primordiais, titãs e olímpicos */
 
-    object-fit: cover;
+.grid-deuses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 190px));
+  justify-content: center;
 
-    display: block;
+  gap: 25px;
 
-    margin: auto;
+  margin: 15px auto;
 
-    border-radius: 6px;
+  animation: entradaCard 0.8s ease both;
 }
 
-.deuses h4 {
-    color: #43220f;
+.grid-deuses li {
+  text-align: center;
 
-    font-size: 19px;
+  width: 190px;
 
-    margin: 5px 0 2px;
+  list-style: none;
 }
 
-.deuses p {
-    color: #67371e;
+.grid-deuses img {
+  width: 180px;
+  height: 230px;
 
-    font-size: 24px;
+  object-fit: cover;
 
-    margin: 0;
+  display: block;
+
+  margin: auto;
+
+  border-radius: 6px;
 }
 
+.grid-deuses h5 {
+  color: var(--marrom-escuro);
+
+  font-size: 19px;
+
+  margin: 5px 0 2px;
+}
+
+.grid-deuses p {
+  color: var(--marrom-medio);
+
+  font-size: 15px;
+
+  margin: 0;
+}
 
 /* URANO */
 
 .urano {
-    text-align: center;
+  text-align: center;
 
-    margin: 15px auto;
+  margin: 15px auto;
 
-    animation: entradaCard 0.8s ease both;
+  animation: entradaCard 0.8s ease both;
 }
 
 .urano img {
-    width: 140px;
-    height: 180px;
+  width: 140px;
+  height: 180px;
 
-    object-fit: cover;
+  object-fit: cover;
 
-    margin: auto;
+  margin: auto;
 }
 
-.urano h4 {
-    font-size: 12px;
+.urano h5 {
+  font-size: 12px;
 
-    margin: 5px;
+  margin: 5px;
 }
 
 .urano p {
-    font-size: 24px;
+  font-size: 15px;
 
-    margin: 0;
+  margin: 0;
 }
-
 
 /* TEXTOS MARRONS */
 
 .texto {
-    display: flex;
+  display: flex;
 
-    width: 100%;
+  width: 100%;
 
-    background-color: #805335;
+  background-color: var(--marrom-texto);
 
-    color: #f5e9d4;
+  color: var(--creme);
 
-    padding: 20px 60px;
+  padding: 20px 60px;
 
-    margin: 15px 0;
+  margin: 15px 0;
 
-    font-family: "Fahkwang", sans-serif;
+  font-family: "Fahkwang", sans-serif;
 
-    animation: entradaCard 0.8s ease both;
+  animation: entradaCard 0.8s ease both;
 }
 
 .texto p {
-    max-width: 900px;
+  max-width: 900px;
 
-    margin: auto;
+  margin: auto;
 
-    font-size: 20px;
+  font-size: 20px;
 
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .texto img {
-    padding: 9px;
+  padding: 9px;
 
-    width: 300px;
-    height: 200px;
+  width: 300px;
+  height: 200px;
 }
 
 .texto-amarelo {
-    font-size: 20px;
-    text-align: left;
+  font-size: 20px;
+  text-align: left;
 
-    display: flex;
+  display: flex;
 
-    background-color: #BE843C;
+  background-color: var(--marrom-texto-claro);
 
-    color: #f5e9d4;
+  color: var(--creme);
 
-    padding: 20px 60px;
+  padding: 20px 60px;
 
-    margin: 15px 0;
+  margin: 15px 0;
 
-    font-family: "Fahkwang", sans-serif;
+  font-family: "Fahkwang", sans-serif;
 
-    animation: entradaCard 0.8s ease both;
+  animation: entradaCard 0.8s ease both;
 }
 
 .texto-amarelo img {
-    width: 300px;
-    height: 200px;
+  width: 300px;
+  height: 200px;
 }
-
-
-/* TITÃS */
-
-.gen .titan {
-    display: grid;
-
-    grid-template-columns: repeat(3, 180px);
-
-    justify-content: center;
-
-    gap: 25px;
-
-    margin: 15px auto;
-
-    animation: entradaCard 0.8s ease both;
-}
-
-.titan img {
-    width: 180px;
-    height: 230px;
-
-    object-fit: cover;
-
-    display: block;
-
-    margin: auto;
-
-    border-radius: 6px;
-}
-
-.titan h4 {
-    color: #43220f;
-
-    font-size: 19px;
-
-    margin: 5px 0 2px;
-}
-
-.titan p {
-    color: #67371e;
-
-    font-size: 20px;
-
-    margin: 0;
-}
-
-
-/* OLÍMPICOS */
-
-.deuses-olimpicos {
-    display: grid;
-
-    grid-template-columns: repeat(3, 180px);
-
-    justify-content: center;
-
-    gap: 35px;
-
-    margin: 15px auto;
-
-    animation: entradaCard 0.8s ease both;
-}
-
-.deuses-olimpicos h4 {
-    color: #43220f;
-
-    font-size: 19px;
-
-    margin: 5px 0 2px;
-}
-
-.deuses-olimpicos p {
-    color: #67371e;
-
-    font-size: 20px;
-
-    margin: 0;
-}
-
-.deuses-olimpicos img {
-    width: 180px;
-    height: 230px;
-
-    object-fit: cover;
-
-    display: block;
-
-    margin: auto;
-
-    border-radius: 6px;
-}
-
 
 /* RODAPÉ */
 
 footer {
-    background-color: #8a4e2f;
-    color: #fff;
-    text-align: center;
+  background-color: var(--marrom-footer);
+  color: #fff;
+  text-align: center;
 
-    padding: 45px 20px 25px;
+  padding: 45px 20px 25px;
 
-    border-top: 1px solid #444;
+  border-top: 1px solid #444;
 
-    margin-top: 50px;
+  margin-top: 50px;
 
-    animation: entrada 0.8s ease both;
+  animation: entrada 0.8s ease both;
 }
 
 footer h2 {
-    color: #fff;
+  color: #fff;
 
-    font-size: 24px;
-    font-weight: 500;
-    letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
 
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 footer p {
-    color: #fff;
+  color: #fff;
 
-    font-size: 14px;
-    line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.6;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 footer a {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 
-    gap: 8px;
+  gap: 8px;
 
-    color: #fff;
+  color: #fff;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    font-size: 15px;
+  font-size: 15px;
 
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #aaa;
+  color: #aaa;
 }
 
 footer img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 footer p:last-child {
-    border-top: 1px solid #fff;
+  border-top: 1px solid #fff;
 
-    padding-top: 20px;
+  padding-top: 20px;
 
-    margin: 0;
+  margin: 0;
 
-    color: #fff;
+  color: #fff;
 
-    font-size: 12px;
+  font-size: 12px;
 }
-
 
 /* ANIMAÇÕES */
 
 @keyframes entradaPagina {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes entrada {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes entradaBanner {
-    from {
-        opacity: 0;
-        transform: scale(1.03);
-    }
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes entradaImagem {
-    from {
-        transform: scale(1.08);
-    }
+  from {
+    transform: scale(1.08);
+  }
 
-    to {
-        transform: scale(1);
-    }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes entradaCard {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes saidaPagina {
-    from {
-        opacity: 1;
-    }
+  from {
+    opacity: 1;
+  }
 
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
 }
 
 body.saindo {
-    animation: saidaPagina 0.6s ease forwards;
+  animation: saidaPagina 0.6s ease forwards;
 }
-
 
 /* TABLET */
 
 @media only screen and (max-width: 1045px) {
-
-    header nav ul {
-        gap: 10px;
-        padding: 17px;
-    }
-
-    .deuses {
-        grid-template-columns: repeat(2, 180px);
-    }
-
-    .deuses-olimpicos img {
-        width: 150px;
-        height: 200px;
-    }
+  header nav ul {
+    gap: 10px;
+    padding: 17px;
+  }
 }
-
 
 /* CELULAR */
 
 @media only screen and (max-width: 600px) {
+  header nav ul {
+    flex-wrap: wrap;
 
-    header nav ul {
-        flex-wrap: wrap;
+    justify-content: center;
 
-        justify-content: center;
+    gap: 10px;
 
-        gap: 10px;
+    padding: 11px;
+  }
 
-        padding: 11px;
-    }
+  .banner h1 {
+    font-size: 38px;
+    text-align: center;
+  }
 
-    .banner h1 {
-        font-size: 38px;
-        text-align: center;
-    }
+  .card {
+    flex-direction: column;
+    text-align: center;
 
-    .card {
-        flex-direction: column;
-        text-align: center;
+    padding: 15px 20px;
+  }
 
-        padding: 15px 20px;
-    }
+  .greek-text {
+    text-align: center;
+  }
 
-    .greek-text {
-        text-align: center;
-    }
+  .texto,
+  .texto-amarelo {
+    flex-direction: column;
 
-    .texto,
-    .texto-amarelo {
-        flex-direction: column;
+    padding: 15px 30px;
 
-        padding: 15px 30px;
+    text-align: center;
+  }
 
-        text-align: center;
-    }
+  .texto p {
+    font-size: 16px;
+  }
 
-    .texto p {
-        font-size: 16px;
-    }
+  .texto img,
+  .texto-amarelo img {
+    width: 200px;
+    height: 150px;
 
-    .texto img,
-    .texto-amarelo img {
-        width: 200px;
-        height: 150px;
+    margin: auto;
+  }
 
-        margin: auto;
-    }
+  .gen > img {
+    width: 150px;
+    height: 200px;
+  }
 
-    .gen img {
-        width: 150px;
-        height: 200px;
-    }
+  .grid-deuses {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 150px));
+    gap: 15px;
+  }
 
-    .gen {
-        grid-template-columns: repeat(2, 150px);
-    }
+  .grid-deuses li {
+    width: 150px;
+  }
 
-    .gen .titan {
-        grid-template-columns: repeat(2, 150px);
-    }
-
-    .gen .titan img {
-        width: 150px;
-        height: 200px;
-    }
-
-    .deuses {
-        grid-template-columns: repeat(1, 150px);
-        gap: 15px;
-    }
-
-    .deuses div {
-        width: 150px;
-    }
-
-    .deuses img {
-        width: 150px;
-        height: 200px;
-    }
-
-    .deuses-olimpicos {
-        grid-template-columns: repeat(1, 150px);
-        gap: 15px;
-    }
-
-    .deuses-olimpicos img {
-        width: 140px;
-        height: 200px;
-    }
+  .grid-deuses img {
+    width: 150px;
+    height: 200px;
+  }
 }
 
-
-/* REDUZIR ANIMAÇÕES */
-
 @media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
