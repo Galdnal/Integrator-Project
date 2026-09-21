@@ -169,6 +169,24 @@ footer p:last-child {
   font-size: 12px;
 }
 
+/* Barra de Rolagem */
+/* Para navegadores que suportam a propriedade W3C (Firefox) */
+* {
+  scrollbar-width: medium; 
+  scrollbar-color: var(--marrom-texto-claro) var(--creme-fundo);
+} /* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--creme-fundo);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--marrom-texto-claro);
+  border-radius: 6px;
+  border: 3px solid var(--creme-fundo);
+}
+
 /* ANIMAÇÕES (usadas por todas as páginas) */
 
 @keyframes entradaPagina {
