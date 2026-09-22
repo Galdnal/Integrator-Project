@@ -43,6 +43,7 @@
   width: 90%;
   margin: 0 auto;
   animation: entrada 0.8s ease 0.3s both;
+  animation-play-state: paused;
 }
 
 /* CARDS */
@@ -58,6 +59,7 @@
   font-family: "Fahkwang", sans-serif;
   font-size: 20px;
   animation: entradaCard 0.8s ease both;
+  animation-play-state: paused;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;

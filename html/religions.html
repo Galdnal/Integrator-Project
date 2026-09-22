@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mitologias e Religiões</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("rolando");
+    } else {
+      header.classList.remove("rolando");
+    }
+  });
+</script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home.html">Inicial</a></li>
+
+          <li><a href="conection.html">Conexão</a></li>
+
+          <li><a href="concepts.html">Conceitos</a></li>
+
+          <li><a href="mythologies.html">Mitologias</a></li>
+
+          <li><a class="atual"  href="religions.html">Religiões</a></li>
+
+          <li><a href="#">Mapa</a></li>
+
+          <li><a href="#">Época</a></li>
+        </ul>
+      </nav>
+    </header>

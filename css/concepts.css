@@ -48,6 +48,7 @@
   position: relative;
   margin: 0 auto;
   animation: entrada 1s ease 0.3s both;
+  animation-play-state: paused;
 }
 
 .timeline-container::before {
@@ -72,6 +73,7 @@
   align-items: center;
   text-align: center;
   animation: entradaCard 0.8s ease both;
+  animation-play-state: paused;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;

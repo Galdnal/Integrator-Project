@@ -3,20 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Entenda a conexão entre mitologia e religião: como narrativas míticas se tornam prática religiosa." />
 
     <title>Conexão</title>
 
+    <link rel="icon" type="image/png" href="../src/logo.png" />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/conection.css" />
+    <noscript>
+      <style>
+        .overview, .linha-amarela, .card, .gen, .grid-deuses, .urano, .texto,
+        .texto-amarelo, .card-mitology-base, .card--religion-practice,
+        .card--connection, .card--comparison, .timeline-container,
+        .section-title, .cards {
+          animation-play-state: running !important;
+        }
+      </style>
+    </noscript>
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
     <header>
       <nav>
         <ul>
           <li><a href="home.html">Inicial</a></li>
-          <li><a class="atual" href="conection.html">Conexão</a></li>
+          <li><a class="atual" href="conection.html" aria-current="page">Conexão</a></li>
           <li><a href="concepts.html">Conceitos</a></li>
           <li><a href="mythologies.html">Mitologias</a></li>
           <li><a href="#">Religiões</a></li>
@@ -30,7 +43,7 @@
       <img src="../src/Rectangle 24.svg" alt="banner" />
       <h1>Conexão</h1>
     </section>
-    <main>
+    <main id="main-content">
       <div class="card-mitology-base">
         <p>
           A mitologia fornece as narrativas, os deuses e os símbolos que formam
@@ -80,5 +93,7 @@
 
       <p>&copy; 2026 Mitologias e Religiões. Todos os direitos reservados.</p>
     </footer>
+    <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">&uarr;</button>
+    <script src="../js/script.js" defer></script>
   </body>
 </html>
