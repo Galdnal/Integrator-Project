@@ -107,3 +107,13 @@
     initScrollReveal();
   });
 })();
+/* Mantém a navbar disponível durante a rolagem. */
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  if (!header) return;
+  const toggleStickyHeader = () => {
+    header.classList.toggle("rolando", window.scrollY > 50);
+  };
+  window.addEventListener("scroll", toggleStickyHeader, { passive: true });
+  toggleStickyHeader();
+});
