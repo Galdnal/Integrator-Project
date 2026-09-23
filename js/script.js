@@ -6,7 +6,7 @@
      a página e leva de volta pro início ao clicar.
 
   2. Animações de entrada ao rolar — os elementos que já tinham uma
-     animação de "entrada" (fade/slide) só disparam quando entram na
+     animação de "entrada" (fade/slide) só acontecem quando entram na
      tela, em vez de todos de uma vez no carregamento da página. Assim
      o efeito é visto mesmo em conteúdo que está mais abaixo na página.
 
@@ -25,7 +25,7 @@
     if (!btn) return;
 
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     const toggleVisibility = () => {
@@ -73,7 +73,7 @@
     if (!elements.length) return;
 
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     const revealNow = () => {
@@ -96,7 +96,7 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.15, rootMargin: "0px 0px -50px 0px" },
     );
 
     elements.forEach((el) => observer.observe(el));
