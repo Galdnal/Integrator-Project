@@ -175,7 +175,7 @@ main h2 {
 .gen h4 {
   text-align: center;
 
-  font-size: 23px;
+  font-size: 29px;
 
   color: var(--marrom-medio);
 
@@ -196,7 +196,7 @@ main h2 {
 .gen > h5 {
   color: var(--marrom-escuro);
 
-  font-size: 19px;
+  font-size: 29px;
 
   margin: 3px;
 }
@@ -321,6 +321,13 @@ main h2 {
   object-fit: contain;
   padding: 0;
 }
+.historia-inca img {
+  order: 2;
+}
+
+.historia-inca .maia-text {
+  order: 1;
+}
 
 /* TEXTOS MARRONS */
 
@@ -335,7 +342,7 @@ main h2 {
 
   padding: 20px 60px;
 
-  margin: 15px 0;
+  margin: 30px 0;
 
   font-family: "Fahkwang", sans-serif;
 
