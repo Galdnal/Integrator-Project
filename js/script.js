@@ -67,6 +67,11 @@
       ".timeline-container",
       ".section-title",
       ".cards",
+      ".civilizacao",
+      ".intro-bloco",
+      ".secao-titulo",
+      ".grid-religioes",
+      ".bloco-curiosidades",
     ].join(", ");
 
     const elements = document.querySelectorAll(selectors);
@@ -87,6 +92,12 @@
       return;
     }
 
+    // threshold baixo + rootMargin negativo: revela assim que uma
+    // pontinha do elemento aparece, em vez de esperar 15% dele
+    // inteiro estar visível. Isso evitava que blocos muito altos
+    // (comuns no celular, com texto longo empilhado) ficassem
+    // "presos" invisíveis por rolagens inteiras — a pessoa passava
+    // pela imagem sem ela nunca ter aparecido.
     const observer = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {
@@ -96,7 +107,7 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -50px 0px" },
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" },
     );
 
     elements.forEach((el) => observer.observe(el));
