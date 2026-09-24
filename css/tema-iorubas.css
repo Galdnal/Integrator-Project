@@ -1,0 +1,11 @@
+/* Tema visual da página Iorubá: vermelho + dourado, em cima da
+   paleta padrão do site (base.css). Header/rodapé continuam com a
+   cor de marca do site — só o conteúdo troca de cor aqui. */
+
+:root {
+  --marrom-card: #8a1f1f;
+  --marrom-texto: #6e1717;
+  --marrom-texto-claro: #c99a2e;
+  --marrom-medio: #a52a2a;
+  --amarelo-linha: #d4af37;
+}

@@ -1,0 +1,11 @@
+/* Tema visual da página Xintoísmo: vermelho torii, em cima da
+   paleta padrão do site (base.css). Header/rodapé continuam com a
+   cor de marca do site — só o conteúdo troca de cor aqui. */
+
+:root {
+  --marrom-card: #a63a3a;
+  --marrom-texto: #7a2b2b;
+  --marrom-texto-claro: #c94c4c;
+  --marrom-medio: #8c3232;
+  --amarelo-linha: #b7472a;
+}

@@ -125,13 +125,40 @@ main h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4 0px;
+  gap: 40px;
   width: 100%;
   background-color: var(--marrom-card);
   margin: 10px 0;
   padding: 20px 40px;
   animation: entradaCard 0.8s ease both;
   animation-play-state: paused;
+
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* LINK "VOLTAR PARA MITOLOGIAS" nas subpáginas */
+
+.voltar-mitologias {
+  text-align: center;
+  margin: 15px 0 0;
+}
+
+.voltar-mitologias a {
+  color: var(--marrom-escuro);
+  font-family: "Fahkwang", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.voltar-mitologias a:hover {
+  text-decoration: underline;
 }
 
 .card img {
@@ -148,13 +175,13 @@ main h2 {
 
 .greek-text h3 {
   color: var(--marrom-medio);
-  font-size: 1cm;
+  font-size: 22px;
   margin: 0 0 15px 0;
 }
 
 .greek-text p {
   color: var(--creme);
-  font-size: 0.6cm;
+  font-size: 15px;
   line-height: 1.4;
   margin: 0;
 }

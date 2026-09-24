@@ -1,0 +1,11 @@
+/* Tema visual da página Maia: verde-jade + terracota, em cima da
+   paleta padrão do site (base.css). Header/rodapé continuam com a
+   cor de marca do site — só o conteúdo troca de cor aqui. */
+
+:root {
+  --marrom-card: #3a6352;
+  --marrom-texto: #2f4d3f;
+  --marrom-texto-claro: #b5652b;
+  --marrom-medio: #4f7a68;
+  --amarelo-linha: #c9a227;
+}
