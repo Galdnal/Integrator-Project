@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore no mapa as regiões ligadas às mitologias e religiões apresentadas no projeto.">
+<title>Mapa Cultural | Mitologias e Religiões</title>
+<link rel="icon" type="image/png" href="../src/logo.png">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/mapa.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+<header><nav><ul>
+<li><a href="home.html">Inicial</a></li><li><a href="conection.html">Conexão</a></li><li><a href="concepts.html">Conceitos</a></li>
+<li><a href="mythologies.html">Mitologias</a></li><li><a href="religions.html">Religiões</a></li>
+<li><a class="atual" href="mapa.html" aria-current="page">Mapa</a></li><li><a href="epocas.html">Épocas</a></li>
+</ul></nav></header>
+
+<section class="map-hero"><div><span>ATLAS CULTURAL</span><h1>Mapa das Tradições</h1><p>Selecione uma região para descobrir a tradição relacionada e acessar o conteúdo criado pelo grupo.</p></div></section>
+
+<main id="main-content" class="map-page">
+<section class="map-layout">
+<div class="map-card" aria-label="Mapa interativo das regiões">
+<div class="map-surface" data-world-map>
+<div class="world-shape" aria-hidden="true">
+  <span class="continent c-na"></span><span class="continent c-sa"></span><span class="continent c-eu"></span>
+  <span class="continent c-af"></span><span class="continent c-as"></span><span class="continent c-oc"></span>
+</div>
+<a class="map-pin pin-grecia" data-map-link data-title="Grécia" data-symbol="Ω" data-description="Mitologia Grega — deuses do Olimpo, titãs e narrativas que marcaram a cultura ocidental." data-href="mythologies.html?local=grecia" href="mythologies.html?local=grecia" aria-label="Grécia: Mitologia Grega"><span>Ω</span><i>Grécia</i></a>
+<a class="map-pin pin-maia" data-map-link data-title="Mesoamérica" data-symbol="☀" data-description="Povos Maias — tradição mesoamericana com escrita própria e conhecimentos astronômicos." data-href="mythologies.html?local=maia" href="mythologies.html?local=maia" aria-label="Mesoamérica: Povos Maias"><span>☀</span><i>Mesoamérica</i></a>
+<a class="map-pin pin-ioruba" data-map-link data-title="África Ocidental" data-symbol="✦" data-description="Povos Iorubás — tradição da África Ocidental com forte presença cultural no Brasil." data-href="mythologies.html?local=iorubas" href="mythologies.html?local=iorubas" aria-label="África Ocidental: Povos Iorubás"><span>✦</span><i>África Ocidental</i></a>
+<a class="map-pin pin-inca" data-map-link data-title="Andes" data-symbol="☼" data-description="Povo Inca — tradição andina associada a uma grande civilização pré-colombiana." data-href="mythologies.html?local=inca" href="mythologies.html?local=inca" aria-label="Andes: Povo Inca"><span>☼</span><i>Andes</i></a>
+<a class="map-pin pin-japao" data-map-link data-title="Japão" data-symbol="⛩" data-description="Xintoísmo — espiritualidade tradicional japonesa centrada nos kami e na natureza." data-href="mythologies.html?local=xintoismo" href="mythologies.html?local=xintoismo" aria-label="Japão: Xintoísmo"><span>⛩</span><i>Japão</i></a>
+<a class="map-pin pin-nz" data-map-link data-title="Aotearoa / Nova Zelândia" data-symbol="◈" data-description="Povo Māori — cultura polinésia marcada pela conexão espiritual entre pessoas, terra e natureza." data-href="mythologies.html?local=maori" href="mythologies.html?local=maori" aria-label="Nova Zelândia: Povo Māori"><span>◈</span><i>Māori</i></a>
+<a class="map-pin pin-india" data-map-link data-title="Índia" data-symbol="ॐ" data-description="Hinduísmo — conjunto diverso de tradições religiosas originadas no subcontinente indiano." data-href="religions.html?local=hinduismo" href="religions.html?local=hinduismo" aria-label="Índia: Hinduísmo"><span>ॐ</span><i>Hinduísmo</i></a>
+<a class="map-pin pin-arabia" data-map-link data-title="Península Arábica" data-symbol="☪" data-description="Islamismo — tradição monoteísta com raízes na Arábia do século VII." data-href="religions.html?local=islamismo" href="religions.html?local=islamismo" aria-label="Península Arábica: Islamismo"><span>☪</span><i>Islamismo</i></a>
+<a class="map-pin pin-punjab" data-map-link data-title="Punjab" data-symbol="ੴ" data-description="Sikhismo — religião surgida no Punjab, associada aos ensinamentos dos Gurus." data-href="religions.html?local=sikhismo" href="religions.html?local=sikhismo" aria-label="Punjab: Sikhismo"><span>ੴ</span><i>Sikhismo</i></a>
+</div>
+</div>
+<aside class="map-info" data-map-panel>
+<span class="map-symbol" data-map-symbol>Ω</span><span class="map-kicker">TRADIÇÃO SELECIONADA</span>
+<h2 data-map-title>Grécia</h2><p data-map-description></p>
+<a class="map-cta" data-map-link href="mythologies.html?local=grecia" data-href="mythologies.html?local=grecia" data-title="Grécia" data-symbol="Ω" data-description="Mitologia Grega">Explorar conteúdo <span>→</span></a>
+</aside>
+</section>
+<section class="map-legend"><span><b class="pulse-demo"></b> Ponto interativo</span><span>Toque/clique em um símbolo para abrir o conteúdo</span></section>
+</main>
+<footer><h2>Mitologias e Religiões</h2><p>Conhecimento, cultura e curiosidades sobre o universo sagrado e mitológico.</p><a href="https://www.instagram.com/sagrado_e.mitico/" target="_blank" rel="noopener noreferrer"><img src="../src/instagram.svg" alt=""> Instagram</a><p>&copy; 2026 Mitologias e Religiões. Todos os direitos reservados.</p></footer>
+<button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">&uarr;</button>
+<script src="../js/script.js" defer></script>
+</body>
+</html>
