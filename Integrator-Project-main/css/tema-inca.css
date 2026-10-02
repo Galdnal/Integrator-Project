@@ -1,0 +1,11 @@
+/* Tema visual da página Inca: dourado + azul andino, em cima da
+   paleta padrão do site (base.css). Header/rodapé continuam com a
+   cor de marca do site — só o conteúdo troca de cor aqui. */
+
+:root {
+  --marrom-card: #6d4c1f;
+  --marrom-texto: #24506b;
+  --marrom-texto-claro: #c99a2e;
+  --marrom-medio: #2f6f8f;
+  --amarelo-linha: #d4af37;
+}
