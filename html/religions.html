@@ -1,61 +1,166 @@
 <!doctype html>
 
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
 
-    <title>Religiões</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/religions.css" />
-    <script>
-  const header = document.querySelector("header");
+  <title>Religiões</title>
+<link rel="icon" type="image/png" href="../src/logo.png" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/religions.css" />
+  <script>
+    const header = document.querySelector("header");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("rolando");
-    } else {
-      header.classList.remove("rolando");
-    }
-  });
-</script>
-      <noscript>
-        <style>
-          .overview, .linha-amarela, .card, .gen, .grid-deuses, .urano, .texto,
-          .texto-amarelo, .card-mitology-base, .card--religion-practice,
-          .card--connection, .card--comparison, .timeline-container,
-          .section-title, .cards {
-            animation-play-state: running !important;
-          }
-        </style>
-      </noscript>
-  </head>
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("rolando");
+      } else {
+        header.classList.remove("rolando");
+      }
+    });
+  </script>
+  <noscript>
+    <style>
+      .overview,
+      .linha-amarela,
+      .card,
+      .gen,
+      .grid-deuses,
+      .urano,
+      .texto,
+      .texto-amarelo,
+      .card-mitology-base,
+      .card--religion-practice,
+      .card--connection,
+      .card--comparison,
+      .timeline-container,
+      .section-title,
+      .cards {
+        animation-play-state: running !important;
+      }
+    </style>
+  </noscript>
+</head>
 
-  <body>
-    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="home.html">Inicial</a></li>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Inicial</a></li>
 
-          <li><a href="conection.html">Conexão</a></li>
+        <li><a href="conection.html">Conexão</a></li>
 
-          <li><a href="concepts.html">Conceitos</a></li>
+        <li><a href="concepts.html">Conceitos</a></li>
 
-          <li><a href="mythologies.html">Mitologias</a></li>
+        <li><a href="mythologies.html">Mitologias</a></li>
 
-          <li><a class="atual" href="religions.html" aria-current="page">Religiões</a></li>
+        <li><a class="atual" href="religions.html" aria-current="page">Religiões</a></li>
 
-          <li><a href="#">Mapa</a></li>
+        <li><a href="#">Mapa</a></li>
 
-          <li><a href="#">Época</a></li>
-        </ul>
-      </nav>
-    </header>
-     <section class="banner">
-      <img src="../src/banner_religion.svg" alt="banner" />
-      <h1>Religiões</h1>
-    </section>
+        <li><a href="#">Época</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="../src/banner_religion.svg" alt="banner" />
+    <h1>Religiões</h1>
+  </section>
+  <section class="overview">
+
+    <h2>A funcionalidade da religião</h2>
+    <p>
+      A religião é um fenômeno social, cultural e espiritual que acompanha a humanidade há milhares de anos. Sua
+      influência pode contribuir para a solidariedade, a identidade coletiva e a preservação de tradições, embora também
+      tenha participado de conflitos e disputas históricas. Seu papel varia conforme a sociedade, a época e as crenças
+      de cada comunidade, sendo fundamental compreender as religiões para entender a diversidade cultural do mundo.
+    </p>
+  </section>
+
+  <hr class="linha-amarela" />
+
+  <main class="main-content" id="main-content">
+    <h2>Grandes Religiões</h2>
+
+    <a class="cards" href="cristianismo.html">
+      <img src="../src/CRISTIANISMO IMG.svg" alt="Imagens relacionadas ao Cristianismo" />
+      <div class="greek-text">
+        <h3>Cristianismo</h3>
+        <p>Tradição centrada na vida, morte e ressurreição de Jesus Cristo e na fé em seus ensinamentos.</p>
+      </div>
+    </a>
+
+    <a class="cards" href="islamismo.html">
+      <img src="../src/ISLAMISMO IMG.svg" alt="Imagens relacionadas ao Islamismo" />
+      <div class="greek-text">
+        <h3>Islamismo</h3>
+        <p>Religião monoteísta fundada na mensagem de Maomé e no Alcorão, com raízes na Arábia do século VII.</p>
+      </div>
+    </a>
+
+    <a class="cards" href="hinduismo.html">
+      <img src="../src/HINDUISMO IMG.svg" alt="Imagens relacionadas ao Hinduísmo" />
+      <div class="greek-text">
+        <h3>Hinduísmo</h3>
+        <p>Conjunto de tradições religiosas originadas no subcontinente indiano, marcado por grande diversidade de
+          crenças e práticas.</p>
+      </div>
+    </a>
+
+    <a class="cards" href="budismo.html">
+      <img src="../src/BUDISMO IMG.svg" alt="Imagens relacionadas ao Budismo" />
+      <div class="greek-text">
+        <h3>Budismo</h3>
+        <p>Tradição espiritual associada aos ensinamentos de Siddhartha Gautama, o Buda, e ao caminho para superar o
+          sofrimento.</p>
+      </div>
+    </a>
+
+    <a class="cards" href="sikhismo.html">
+      <img src="../src/SIKHISMO IMG.svg" alt="Imagens relacionadas ao Sikhismo" />
+      <div class="greek-text">
+        <h3>Sikhismo</h3>
+        <p>Religião surgida no Punjab, fundada nos ensinamentos dos Gurus e na devoção a um único Deus.</p>
+      </div>
+    </a>
+  </main>
+
+  <hr class="linha-amarela" />
+
+  <section class="overview">
+   
+    <p><span>RELIGIÕES E SUA IMPORTÂNCIA CULTURAL</span><br>
+      As grandes religiões mundiais influenciaram profundamente a arte, a arquitetura, a filosofia, a literatura e os
+      costumes de diferentes sociedades. Apesar de suas diferenças nas crenças e nas práticas, muitas tradições
+      religiosas abordam questões como o sentido da vida, a ética, a existência humana e a relação com o sagrado.
+    </p>
+
+  </section>
+  <footer>
+    <h2>Mitologias e Religiões</h2>
+
+    <p>
+      Conhecimento, cultura e curiosidades sobre o universo sagrado e
+      mitológico.
+    </p>
+
+    <a href="https://www.instagram.com/sagrado_e.mitico/" target="_blank" rel="noopener noreferrer">
+      <img src="../src/instagram.svg" alt="Instagram" />
+      Instagram
+    </a>
+
+    <p>&copy; 2026 Mitologias e Religiões. Todos os direitos reservados.</p>
+  </footer>
+
+  <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+    &uarr;
+  </button>
+  <script src="../js/script.js" defer></script>
+</body>
+
+</html>
