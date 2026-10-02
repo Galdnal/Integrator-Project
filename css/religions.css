@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-/* BANNER */
+/* =========================
+   BANNER
+========================= */
 
 .banner {
   position: relative;
@@ -49,8 +51,667 @@
 
   text-shadow: 2px 2px 10px black;
 
-  -webkit-text-stroke-color: #ede8d0;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke: 1px #ede8d0;
 
   animation: entrada 1s ease 0.2s both;
+}
+
+
+/* =========================
+   VOLTAR PARA MITOLOGIAS
+========================= */
+
+.voltar-mitologias {
+  text-align: center;
+  margin: 15px 0 0;
+}
+
+.voltar-mitologias a {
+  color: var(--marrom-escuro);
+
+  font-family: "Fahkwang", sans-serif;
+  font-size: 15px;
+
+  text-decoration: none;
+}
+
+.voltar-mitologias a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   LINHA AMARELA
+========================= */
+
+
+.linha-amarela {
+
+  border: none;
+
+  height: 2px;
+
+  background-color: var(--amarelo-linha);
+
+  width: 100%;
+
+  margin: 60px auto;
+
+  animation: entrada 0.8s ease 0.4s both;
+
+}
+
+/* =========================
+   VISÃO GERAL
+========================= */
+
+.overview {
+  text-align: center;
+
+  font-family: "Fahkwang", sans-serif;
+
+  animation: entrada 0.8s ease 0.3s both;
+}
+
+.overview h2 {
+  color: #864541;
+
+  font-size: 28px;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.overview p {
+  max-width: 100%;
+
+  margin: 50px auto;
+  padding: 30px;
+
+  background-color: #864541;
+
+  font-size: 18px;
+  color: #ede8d0;
+}
+
+.overview p span {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ede8d0;
+}
+
+
+/* =========================
+   TÍTULOS PRINCIPAIS
+========================= */
+
+main h2 {
+  text-align: center;
+
+  font-size: 30px;
+
+  color: var(--marrom-escuro);
+
+  margin: 20px 0;
+
+  animation: entrada 0.8s ease both;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  background-color: var(--marrom-card);
+  margin: 10px 0;
+  padding: 20px 40px;
+  animation: entradaCard 0.8s ease both;
+  animation-play-state: paused;
+
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cards:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.cards img {
+  width: 170px;
+  height: 230px;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   TEXTO DOS CARDS
+========================= */
+
+.greek-text {
+  flex: 1;
+
+  text-align: center;
+}
+
+.greek-text h3 {
+  color: var(--marrom-medio);
+
+  font-size: 22px;
+
+  margin: 0 0 15px;
+}
+
+.greek-text p {
+  color: var(--creme);
+
+  font-size: 15px;
+  line-height: 1.4;
+
+  margin: 0;
+}
+
+
+/* =========================
+   TEXTO DO CRISTIANISMO
+========================= */
+
+.cristianismo-text {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 50px auto;
+  padding: 30px;
+
+  background-color: #636244;
+
+  font-family: "Fahkwang", sans-serif;
+  font-size: 21px;
+
+  text-align: center;
+
+  color: #ede8d0;
+
+  animation: entrada 0.8s ease 0.3s both;
+}
+
+.cristianismo-text h3 {
+  font-family: "Scheherazade", sans-serif;
+
+  color: #ede8d0;
+
+  font-size: 40px;
+  font-weight: bold;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.cristianismo-text h4 {
+  font-family: "Scheherazade", sans-serif;
+
+  color: #ede8d0;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+
+.cristianismo-images {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+  gap: 50px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 20px auto;
+
+  animation: entrada 0.8s ease 0.3s both;
+
+}
+
+.cristianismo-images img {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+  ISLAMISMO
+========================= */
+
+.islamismo-images {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+  gap: 50px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 20px auto;
+
+  animation: entrada 0.8s ease 0.3s both;
+}
+
+.islamismo-images img {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+}
+
+.islamismo-text {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 50px auto;
+  padding: 30px;
+
+  background-color: #651804;
+
+  font-family: "Fahkwang", sans-serif;
+  font-size: 21px;
+
+  text-align: center;
+
+  color: #ede8d0;
+}
+
+.islamismo-text h3 {
+  font-family: "Scheherazade", sans-serif;
+  color: #ede8d0;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 15px 0;
+
+}
+
+.islamismo-text h4 {
+  font-family: "Scheherazade", sans-serif;
+  color: #ede8d0;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.islamismo-text p {
+  color: #ede8d0;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+
+/* =========================
+   HINDUÍSMO
+========================= */
+
+
+.hinduismo-text {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 50px auto;
+  padding: 30px;
+
+  background-color: #8D3D0C;
+
+  font-family: "Fahkwang", sans-serif;
+  font-size: 21px;
+
+  text-align: center;
+
+  color: #ede8d0;
+
+  animation: entrada 0.8s ease 0.3s both;
+}
+
+.hinduismo-text h3 {
+  font-family: "Scheherazade", sans-serif;
+
+  color: #ede8d0;
+
+  font-size: 40px;
+  font-weight: bold;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.hinduismo-text h4 {
+  font-family: "Scheherazade", sans-serif;
+
+  color: #ede8d0;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.hinduismo-text p {
+  color: #ede8d0;
+
+  font-size: 15px;
+  line-height: 1.4;
+
+  margin: 0;
+}
+
+.hinduismo-images {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+  gap: 50px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 20px auto;
+
+  animation: entrada 0.8s ease 0.3s both;
+}
+
+.hinduismo-images img {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+}
+
+/* =========================
+    BUDISMO
+========================= */
+
+.budismo-images {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+  gap: 50px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 20px auto;
+
+  animation: entrada 0.8s ease 0.3s both;
+}
+
+.budismo-images img {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+}
+
+.budismo-text {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 50px auto;
+  padding: 30px;
+
+  background-color: #DB9E50;
+
+  font-family: "Fahkwang", sans-serif;
+  font-size: 21px;
+
+  text-align: center;
+
+  color: #ede8d0;
+
+  animation: entrada 0.8s ease 0.3s both;
+}
+
+.budismo-text h3 {
+  font-family: "Scheherazade", sans-serif;
+
+  color: #ede8d0;
+
+  font-size: 40px;
+  font-weight: bold;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.budismo-text h4 {
+  font-family: "Scheherazade", sans-serif;
+
+  color: #ede8d0;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.budismo-text p {
+  color: #ede8d0;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* =========================
+   SIKHISMO
+========================= */
+.sikhismo-text {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 50px auto;
+  padding: 30px;
+
+  background-color: #DB9E50;
+
+  font-family: "Fahkwang", sans-serif;
+  font-size: 21px;
+
+  text-align: center;
+
+  color: #ede8d0;
+
+}
+
+.sikhismo-text h3 {
+  font-family: "Scheherazade", sans-serif;
+
+  color: #ede8d0;
+
+  font-size: 40px;
+  font-weight: bold;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.sikhismo-text h4 {
+  font-family: "Scheherazade", sans-serif;
+
+  color: #ede8d0;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.sikhismo-text p {
+  color: #ede8d0;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+}.sikhismo-images {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+  gap: 50px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 20px auto;
+
+  animation: entrada 0.8s ease 0.3s both;
+}.sikhismo-images img {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+} 
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media only screen and (max-width: 1045px) {
+
+  header nav ul {
+    gap: 10px;
+    padding: 17px;
+  }
+
+  .cristianismo-images {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+
+    gap: 30px;
+
+    max-width: 300px;
+  }
+
+
+  .islamismo-images {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+
+    gap: 30px;
+
+    max-width: 300px;
+  }
+
+  .hinduismo-images {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+
+    gap: 30px;
+
+    max-width: 300px;
+  }
+
+  .budismo-images {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+
+    gap: 30px;
+
+    max-width: 300px;
+  }
+  .sikhismo-images {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+
+    gap: 30px;
+
+    max-width: 300px;
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media only screen and (max-width: 600px) {
+
+  .banner h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 15px 20px;
+  }
+
+  .greek-text {
+    text-align: center;
+  }
+
+  .cristianismo-text {
+    padding: 20px 15px;
+    font-size: 17px;
+  }
+
+  .cristianismo-text h3 {
+    font-size: 32px;
+  }
+
+  .cristianismo-text h4 {
+    font-size: 20px;
+  }
+
+  .cristianismo-images {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .islamismo-images {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .hinduismo-images {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .budismo-images {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .sikhismo-images {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+    padding: 0 15px;
+  }
 }
