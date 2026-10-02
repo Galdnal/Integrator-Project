@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Religiões</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/religions.css" />
+    <script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("rolando");
+    } else {
+      header.classList.remove("rolando");
+    }
+  });
+</script>
+      <noscript>
+        <style>
+          .overview, .linha-amarela, .card, .gen, .grid-deuses, .urano, .texto,
+          .texto-amarelo, .card-mitology-base, .card--religion-practice,
+          .card--connection, .card--comparison, .timeline-container,
+          .section-title, .cards {
+            animation-play-state: running !important;
+          }
+        </style>
+      </noscript>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home.html">Inicial</a></li>
+
+          <li><a href="conection.html">Conexão</a></li>
+
+          <li><a href="concepts.html">Conceitos</a></li>
+
+          <li><a href="mythologies.html">Mitologias</a></li>
+
+          <li><a class="atual" href="religions.html" aria-current="page">Religiões</a></li>
+
+          <li><a href="#">Mapa</a></li>
+
+          <li><a href="#">Época</a></li>
+        </ul>
+      </nav>
+    </header>
+     <section class="banner">
+      <img src="../src/banner_religion.svg" alt="banner" />
+      <h1>Religiões</h1>
+    </section>

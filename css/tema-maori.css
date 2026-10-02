@@ -1,0 +1,11 @@
+/* Tema visual da página Māori: vermelho ocre (kōkōwai) + preto, em
+   cima da paleta padrão do site (base.css). Header/rodapé continuam
+   com a cor de marca do site — só o conteúdo troca de cor aqui. */
+
+:root {
+  --marrom-card: #7a2e1d;
+  --marrom-texto: #2b2b2b;
+  --marrom-texto-claro: #9c4a2c;
+  --marrom-medio: #5c2418;
+  --amarelo-linha: #c1440e;
+}

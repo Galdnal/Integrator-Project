@@ -1,0 +1,489 @@
+* {
+  box-sizing: border-box;
+}
+
+/* BANNER */
+
+.banner {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 300px;
+
+  overflow: hidden;
+
+  animation: entradaBanner 1s ease both;
+}
+
+.banner img {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+
+  animation: entradaImagem 1.2s ease both;
+}
+
+.banner h1 {
+  position: relative;
+
+  z-index: 1;
+
+  margin-top: 70px;
+
+  color: var(--marrom-escuro);
+
+  font-family: "Rye", Georgia, serif;
+  font-size: 55px;
+
+  text-shadow: 2px 2px 10px black;
+
+  -webkit-text-stroke-color: #ede8d0;
+  -webkit-text-stroke-width: 1px;
+
+  animation: entrada 1s ease 0.2s both;
+}
+
+/* OVERVIEW */
+
+.overview {
+  text-align: center;
+
+  font-family: "Fahkwang", sans-serif;
+
+  padding: 10px 30px;
+
+  animation: entrada 0.8s ease 0.3s both;
+  animation-play-state: paused;
+}
+
+.overview h2 {
+  color: var(--marrom-escuro);
+
+  font-size: 28px;
+
+  margin: 0;
+  padding: 5px;
+}
+
+.overview p {
+  max-width: 850px;
+
+  margin: auto;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+}
+
+/* LINHA AMARELA */
+
+.linha-amarela {
+  border: none;
+
+  height: 2px;
+
+  background-color: var(--amarelo-linha);
+
+  width: 100%;
+
+  margin: 5px auto;
+
+  animation: entrada 0.8s ease 0.4s both;
+  animation-play-state: paused;
+}
+
+/* MAIN */
+
+main h2 {
+  text-align: center;
+
+  font-size: 30px;
+
+  color: var(--marrom-escuro);
+
+  margin: 10px 0;
+
+  animation: entrada 0.8s ease both;
+  animation-play-state: paused;
+}
+
+/* CARD DA MITOLOGIA GREGA */
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  background-color: var(--marrom-card);
+  margin: 10px 0;
+  padding: 20px 40px;
+  animation: entradaCard 0.8s ease both;
+  animation-play-state: paused;
+
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* LINK "VOLTAR PARA MITOLOGIAS" nas subpáginas */
+
+.voltar-mitologias {
+  text-align: center;
+  margin: 15px 0 0;
+}
+
+.voltar-mitologias a {
+  color: var(--marrom-escuro);
+  font-family: "Fahkwang", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.voltar-mitologias a:hover {
+  text-decoration: underline;
+}
+
+.card img {
+  width: 170px;
+  height: 230px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.greek-text {
+  flex: 1;
+  text-align: center;
+}
+
+.greek-text h3 {
+  color: var(--marrom-medio);
+  font-size: 22px;
+  margin: 0 0 15px 0;
+}
+
+.greek-text p {
+  color: var(--creme);
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* GERAÇÕES DIVINAS */
+
+.gen {
+  text-align: center;
+
+  animation: entrada 0.8s ease both;
+  animation-play-state: paused;
+}
+
+.gen h3 {
+  margin-top: 10px;
+}
+
+.gen h4 {
+  text-align: center;
+
+  font-size: 29px;
+
+  color: var(--marrom-medio);
+
+  margin: 5px 0;
+}
+
+/* CAOS */
+
+.gen > img {
+  width: 140px;
+  height: 180px;
+
+  object-fit: cover;
+
+  margin: 10px auto;
+}
+
+.gen > h5 {
+  color: var(--marrom-escuro);
+
+  font-size: 29px;
+
+  margin: 3px;
+}
+
+/* GRID ÚNICO — reaproveitado por deuses primordiais, titãs e olímpicos */
+
+.grid-deuses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 190px));
+  justify-content: center;
+
+  gap: 25px;
+
+  margin: 15px auto;
+
+  animation: entradaCard 0.8s ease both;
+  animation-play-state: paused;
+}
+
+.grid-deuses li {
+  text-align: center;
+
+  width: 190px;
+
+  list-style: none;
+}
+
+.grid-deuses img {
+  width: 180px;
+  height: 230px;
+
+  object-fit: cover;
+
+  display: block;
+
+  margin: auto;
+
+  border-radius: 6px;
+}
+
+.grid-deuses h5 {
+  color: var(--marrom-escuro);
+
+  font-size: 19px;
+
+  margin: 5px 0 2px;
+}
+
+.grid-deuses p {
+  color: var(--marrom-medio);
+
+  font-size: 15px;
+
+  margin: 0;
+}
+
+/* URANO */
+
+.urano {
+  text-align: center;
+
+  margin: 15px auto;
+
+  animation: entradaCard 0.8s ease both;
+  animation-play-state: paused;
+}
+
+.urano img {
+  width: 140px;
+  height: 180px;
+
+  object-fit: cover;
+
+  margin: auto;
+}
+
+.urano h5 {
+  font-size: 12px;
+
+  margin: 5px;
+}
+
+.urano p {
+  font-size: 15px;
+
+  margin: 0;
+}
+/* Maia */
+.maia {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.maia-text {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.maia-text h3 {
+  color: var(--creme);
+  font-size: 28px;
+
+  margin: 0 0 15px;
+}
+
+.maia-text p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  font-size: 20px;
+  line-height: 1.5;
+}
+.texto.maia img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+}
+.historia-inca img {
+  order: 2;
+}
+
+.historia-inca .maia-text {
+  order: 1;
+}
+
+/* TEXTOS MARRONS */
+
+.texto {
+  display: flex;
+
+  width: 100%;
+
+  background-color: var(--marrom-texto);
+
+  color: var(--creme);
+
+  padding: 20px 60px;
+
+  margin: 30px 0;
+
+  font-family: "Fahkwang", sans-serif;
+
+  animation: entradaCard 0.8s ease both;
+  animation-play-state: paused;
+}
+
+.texto p {
+  max-width: 900px;
+
+  margin: auto;
+
+  font-size: 20px;
+
+  line-height: 1.5;
+}
+
+.texto img {
+  padding: 9px;
+
+  width: 200px;
+  height: auto;
+}
+
+.texto-amarelo {
+  font-size: 25px;
+  text-align: left;
+
+  display: flex;
+
+  background-color: var(--marrom-texto-claro);
+
+  color: var(--creme);
+
+  padding: 20px 60px;
+
+  margin: 15px 0;
+
+  font-family: "Fahkwang", sans-serif;
+
+  animation: entradaCard 0.8s ease both;
+  animation-play-state: paused;
+}
+
+.texto-amarelo img {
+  width: 150px;
+  height: auto;
+}
+
+/* TABLET — esse grid é mais largo, por isso quebra antes dos 890px padrão */
+
+@media only screen and (max-width: 1045px) {
+  header nav ul {
+    gap: 10px;
+    padding: 17px;
+  }
+}
+
+/* CELULAR */
+
+@media only screen and (max-width: 600px) {
+  .banner h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+
+    padding: 15px 20px;
+  }
+
+  .greek-text {
+    text-align: center;
+  }
+
+  .texto,
+  .texto-amarelo {
+    flex-direction: column;
+
+    padding: 15px 30px;
+
+    text-align: center;
+  }
+
+  .texto p {
+    font-size: 16px;
+  }
+
+  .texto img,
+  .texto-amarelo img {
+    width: 200px;
+    height: 150px;
+
+    margin: auto;
+  }
+
+  .gen > img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .grid-deuses {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 150px));
+    gap: 15px;
+  }
+
+  .grid-deuses li {
+    width: 150px;
+  }
+
+  .grid-deuses img {
+    width: 150px;
+    height: 200px;
+  }
+}
