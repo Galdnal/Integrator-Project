@@ -1,18 +1,291 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Timeline interativa das épocas históricas relacionadas ao estudo de mitologias e religiões."><title>Épocas | Mitologias e Religiões</title><link rel="icon" type="image/png" href="../src/logo.png"><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/epocas.css"></head>
-<body><a class="skip-link" href="#main-content">Pular para o conteúdo</a><header><nav><ul><li><a href="home.html">Inicial</a></li><li><a href="conection.html">Conexão</a></li><li><a href="concepts.html">Conceitos</a></li><li><a href="mythologies.html">Mitologias</a></li><li><a href="religions.html">Religiões</a></li><li><a href="mapa.html">Mapa</a></li><li><a class="atual" href="epocas.html" aria-current="page">Épocas</a></li></ul></nav></header>
-<section class="era-hero"><span>LINHA DO TEMPO</span><h1>Épocas</h1><p>Uma viagem visual por períodos e acontecimentos que ajudam a contextualizar tradições mitológicas e religiosas.</p></section>
-<main id="main-content" class="era-page"><section class="era-controls" data-timeline><button class="ativo" data-era="todos">Todas</button><button data-era="antiguidade">Antiguidade</button><button data-era="medieval">Medieval</button><button data-era="moderna">Moderna</button><button data-era="contemporanea">Contemporânea</button>
-<div class="timeline"><span></span></div>
-<div class="era-grid">
-<article class="era-card" data-era="antiguidade"><div class="era-year">c. 2000–1000 a.C.</div><div class="era-dot"></div><div><h2>Tradições antigas</h2><p>Cosmologias, divindades e rituais se desenvolvem em diferentes sociedades do mundo antigo.</p><small>Antiguidade</small></div></article>
-<article class="era-card" data-era="antiguidade"><div class="era-year">c. 800–300 a.C.</div><div class="era-dot"></div><div><h2>Grécia Antiga</h2><p>Consolidação de narrativas sobre deuses, heróis e ciclos míticos que atravessaram séculos.</p><small>Antiguidade</small></div></article>
-<article class="era-card" data-era="antiguidade"><div class="era-year">c. 200–100 a.C.</div><div class="era-dot"></div><div><h2>Andes e Mesoamérica</h2><p>Diversas tradições e sistemas cosmológicos se desenvolvem entre povos das Américas.</p><small>Antiguidade</small></div></article>
-<article class="era-card" data-era="medieval"><div class="era-year">séculos VII–X</div><div class="era-dot"></div><div><h2>Novos centros religiosos</h2><p>O islamismo surge na Península Arábica e se expande por diferentes regiões ao longo dos séculos.</p><small>Medieval</small></div></article>
-<article class="era-card" data-era="medieval"><div class="era-year">séculos XV–XVI</div><div class="era-dot"></div><div><h2>Encontros entre mundos</h2><p>Expansões marítimas intensificam contatos entre povos, tradições e sistemas religiosos.</p><small>Medieval / transição</small></div></article>
-<article class="era-card" data-era="moderna"><div class="era-year">séculos XVI–XVIII</div><div class="era-dot"></div><div><h2>Transformações culturais</h2><p>Circulação de ideias, textos e práticas altera a maneira como diferentes sociedades registram suas tradições.</p><small>Moderna</small></div></article>
-<article class="era-card" data-era="contemporanea"><div class="era-year">século XIX</div><div class="era-dot"></div><div><h2>Estudo acadêmico dos mitos</h2><p>A mitologia passa a ser investigada de forma sistemática por campos como antropologia, história e estudos comparados.</p><small>Contemporânea</small></div></article>
-<article class="era-card" data-era="contemporanea"><div class="era-year">séculos XX–XXI</div><div class="era-dot"></div><div><h2>Memória e diversidade</h2><p>Pesquisas e comunidades continuam preservando, reinterpretando e compartilhando tradições culturais.</p><small>Contemporânea</small></div></article>
-</div></section></main>
-<footer><h2>Mitologias e Religiões</h2><p>Conhecimento, cultura e curiosidades sobre o universo sagrado e mitológico.</p><a href="https://www.instagram.com/sagrado_e.mitico/" target="_blank" rel="noopener noreferrer"><img src="../src/instagram.svg" alt=""> Instagram</a><p>&copy; 2026 Mitologias e Religiões. Todos os direitos reservados.</p></footer><button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">&uarr;</button><script src="../js/script.js" defer></script></body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Timeline interativa das épocas históricas relacionadas ao estudo de mitologias e religiões."
+    />
+    <title>Épocas | Mitologias e Religiões</title>
+    <link rel="icon" type="image/png" href="../src/logo.png" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/epocas.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home.html">Inicial</a></li>
+          <li><a href="conection.html">Conexão</a></li>
+          <li><a href="concepts.html">Conceitos</a></li>
+          <li><a href="mythologies.html">Mitologias</a></li>
+          <li><a href="religions.html">Religiões</a></li>
+          <li><a href="mapa.html">Mapa</a></li>
+          <li>
+            <a class="atual" href="epocas.html" aria-current="page">Épocas</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="era-hero">
+      <span>LINHA DO TEMPO</span>
+      <h1>Épocas</h1>
+      <p>
+        Uma viagem visual por períodos e acontecimentos que ajudam a
+        contextualizar tradições mitológicas e religiosas.
+      </p>
+    </section>
+    <main id="main-content" class="era-page">
+      <section class="era-controls" data-timeline>
+        <button class="ativo" data-era="todos">Todas</button
+        ><button data-era="antiguidade">Antiguidade</button
+        ><button data-era="medieval">Medieval</button
+        ><button data-era="moderna">Moderna</button
+        ><button data-era="contemporanea">Contemporânea</button>
+        <div class="timeline"><span></span></div>
+        <div class="era-grid">
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">c. 2000–1000 a.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Tradições antigas</h2>
+              <p>
+                Cosmologias, divindades e rituais se desenvolvem em diferentes
+                sociedades do mundo antigo.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">2.000 a.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Mitologia Grega</h2>
+              <p>
+                Suas raízes aparecem nas antigas tradições religiosas da Grécia.
+                A mitologia grega se desenvolveu ao longo de muitos séculos,
+                especialmente durante o período micênico.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">1.500 a.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Hinduísmo</h2>
+              <p>
+                Suas raízes estão nas antigas tradições védicas do subcontinente
+                indiano. Não possui um fundador ou uma data única de criação.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">1.000 a.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Iorubá</h2>
+              <p>
+                Desenvolveu-se gradualmente na África Ocidental. Suas tradições
+                envolvem divindades como os orixás e foram transmitidas
+                principalmente de forma oral.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">c. 800–300 a.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Grécia Antiga</h2>
+              <p>
+                Consolidação de narrativas sobre deuses, heróis e ciclos míticos
+                que atravessaram séculos.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">500 a.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Budismo</h2>
+              <p>
+                Surgiu no norte da Índia a partir dos ensinamentos de Siddhartha
+                Gautama. Sua origem é geralmente situada entre os séculos VI e V
+                a.C.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">300 a.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Xintoísmo</h2>
+              <p>
+                As práticas de veneração aos kami são antigas, mas o Xintoísmo
+                não possui uma data única de fundação.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">c. 200–100 a.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Andes e Mesoamérica</h2>
+              <p>
+                Diversas tradições e sistemas cosmológicos se desenvolvem entre
+                povos das Américas.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="antiguidade">
+            <div class="era-year">30 d.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Cristianismo</h2>
+              <p>
+                Surgiu no século I d.C., a partir da vida e dos ensinamentos de
+                Jesus de Nazaré.
+              </p>
+              <small>Antiguidade</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="medieval">
+            <div class="era-year">610 d.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Islamismo</h2>
+              <p>
+                Sua origem é tradicionalmente situada em 610 d.C., com as
+                primeiras revelações recebidas por Maomé.
+              </p>
+              <small>Medieval</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="medieval">
+            <div class="era-year">séculos VII–X</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Novos centros religiosos</h2>
+              <p>
+                O islamismo surge na Península Arábica e se expande por
+                diferentes regiões ao longo dos séculos.
+              </p>
+              <small>Medieval</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="medieval">
+            <div class="era-year">1.000 d.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Inuit</h2>
+              <p>
+                A cultura Thule se expandiu pelo Ártico por volta de 1000 d.C. e
+                está ligada aos ancestrais dos atuais Inuit.
+              </p>
+              <small>Medieval</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="medieval">
+            <div class="era-year">1.200 d.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Inca</h2>
+              <p>
+                O povo Inca começou a se desenvolver por volta do século XIII,
+                antes da formação de seu grande império.
+              </p>
+              <small>Medieval</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="medieval">
+            <div class="era-year">1.300 d.C.</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Maori</h2>
+              <p>
+                Os ancestrais dos Maori chegaram à Nova Zelândia vindos da
+                Polinésia aproximadamente entre os séculos XIII e XIV.
+              </p>
+              <small>Medieval</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="medieval">
+            <div class="era-year">séculos XV–XVI</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Encontros entre mundos</h2>
+              <p>
+                Expansões marítimas intensificam contatos entre povos, tradições
+                e sistemas religiosos.
+              </p>
+              <small>Medieval / transição</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="moderna">
+            <div class="era-year">séculos XVI–XVIII</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Transformações culturais</h2>
+              <p>
+                Circulação de ideias, textos e práticas altera a maneira como
+                diferentes sociedades registram suas tradições.
+              </p>
+              <small>Moderna</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="contemporanea">
+            <div class="era-year">século XIX</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Estudo acadêmico dos mitos</h2>
+              <p>
+                A mitologia passa a ser investigada de forma sistemática por
+                campos como antropologia, história e estudos comparados.
+              </p>
+              <small>Contemporânea</small>
+            </div>
+          </article>
+          <article class="era-card" data-era="contemporanea">
+            <div class="era-year">séculos XX–XXI</div>
+            <div class="era-dot"></div>
+            <div>
+              <h2>Memória e diversidade</h2>
+              <p>
+                Pesquisas e comunidades continuam preservando, reinterpretando e
+                compartilhando tradições culturais.
+              </p>
+              <small>Contemporânea</small>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h2>Mitologias e Religiões</h2>
+      <p>
+        Conhecimento, cultura e curiosidades sobre o universo sagrado e
+        mitológico.
+      </p>
+      <a
+        href="https://www.instagram.com/sagrado_e.mitico/"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><img src="../src/instagram.svg" alt="" /> Instagram</a
+      >
+      <p>&copy; 2026 Mitologias e Religiões. Todos os direitos reservados.</p>
+    </footer>
+    <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+      &uarr;
+    </button>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

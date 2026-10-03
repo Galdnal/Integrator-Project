@@ -1,7 +1,9 @@
 (function () {
   "use strict";
 
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
   function initBackToTop() {
     const btn = document.getElementById("back-to-top");
@@ -12,37 +14,63 @@
     toggle();
 
     btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
     });
   }
 
   function initScrollReveal() {
-    const elements = document.querySelectorAll([
-      ".overview", ".linha-amarela", ".card", ".gen", ".grid-deuses", ".urano",
-      ".texto", ".texto-amarelo", ".card-mitology-base", ".card--religion-practice",
-      ".card--connection", ".card--comparison", ".timeline-container", ".section-title",
-      ".cards", ".civilizacao", ".intro-bloco", ".secao-titulo", ".grid-religioes",
-      ".bloco-curiosidades", ".map-panel", ".map-info", ".era-card"
-    ].join(", "));
+    const elements = document.querySelectorAll(
+      [
+        ".overview",
+        ".linha-amarela",
+        ".card",
+        ".gen",
+        ".grid-deuses",
+        ".urano",
+        ".texto",
+        ".texto-amarelo",
+        ".card-mitology-base",
+        ".card--religion-practice",
+        ".card--connection",
+        ".card--comparison",
+        ".timeline-container",
+        ".section-title",
+        ".cards",
+        ".civilizacao",
+        ".intro-bloco",
+        ".secao-titulo",
+        ".grid-religioes",
+        ".bloco-curiosidades",
+        ".map-panel",
+        ".map-info",
+        ".era-card",
+      ].join(", "),
+    );
 
     if (!elements.length) return;
 
-    const reveal = el => el.style.animationPlayState = "running";
+    const reveal = (el) => (el.style.animationPlayState = "running");
 
     if (prefersReducedMotion || !("IntersectionObserver" in window)) {
       elements.forEach(reveal);
       return;
     }
 
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        reveal(entry.target);
-        obs.unobserve(entry.target);
-      });
-    }, { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          reveal(entry.target);
+          obs.unobserve(entry.target);
+        });
+      },
+      { threshold: 0, rootMargin: "0px 0px -8% 0px" },
+    );
 
-    elements.forEach(el => observer.observe(el));
+    elements.forEach((el) => observer.observe(el));
   }
 
   function initHeader() {
@@ -78,9 +106,12 @@
       toggle.innerHTML = open ? "×" : "☰";
     });
 
-    list.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    list
+      .querySelectorAll("a")
+      .forEach((link) => link.addEventListener("click", closeMenu));
 
-    const onScroll = () => header.classList.toggle("rolando", window.scrollY > 50);
+    const onScroll = () =>
+      header.classList.toggle("rolando", window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   }
@@ -90,16 +121,20 @@
     if (!key) return;
 
     const targets = document.querySelectorAll("[data-region]");
-    const target = [...targets].find(el => el.dataset.region === key);
+    const target = [...targets].find((el) => el.dataset.region === key);
     if (!target) return;
 
     target.classList.add("region-highlight");
     target.setAttribute("tabindex", "-1");
 
-    window.setTimeout(() => target.scrollIntoView({
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-      block: "center"
-    }), 180);
+    window.setTimeout(
+      () =>
+        target.scrollIntoView({
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+          block: "center",
+        }),
+      180,
+    );
 
     window.setTimeout(() => target.classList.remove("region-highlight"), 4200);
   }
@@ -113,21 +148,31 @@
     const title = panel?.querySelector("[data-map-title]");
     const description = panel?.querySelector("[data-map-description]");
     const symbol = panel?.querySelector("[data-map-symbol]");
+    const cta = panel?.querySelector(".map-cta");
 
-    const select = button => {
-      buttons.forEach(item => item.classList.remove("selecionado"));
+    const select = (button) => {
+      buttons.forEach((item) => item.classList.remove("selecionado"));
       button.classList.add("selecionado");
       if (title) title.textContent = button.dataset.title || "";
-      if (description) description.textContent = button.dataset.description || "";
+      if (description)
+        description.textContent = button.dataset.description || "";
       if (symbol) symbol.textContent = button.dataset.symbol || "✦";
+      if (cta) cta.href = button.dataset.href || button.getAttribute("href");
     };
 
-    buttons.forEach(button => {
+    buttons.forEach((button) => {
       button.addEventListener("mouseenter", () => select(button));
       button.addEventListener("focus", () => select(button));
-      button.addEventListener("click", () => {
+      button.addEventListener("click", (event) => {
+        // O pin só seleciona; quem abre a subpágina é o botão "Explorar conteúdo".
+        event.preventDefault();
         select(button);
-        window.setTimeout(() => { window.location.href = button.dataset.href; }, 90);
+        if (window.matchMedia("(max-width: 900px)").matches && panel) {
+          panel.scrollIntoView({
+            behavior: prefersReducedMotion ? "auto" : "smooth",
+            block: "center",
+          });
+        }
       });
     });
 
@@ -140,15 +185,25 @@
 
     const buttons = timeline.querySelectorAll("[data-era]");
     const cards = timeline.querySelectorAll(".era-card");
-    const filter = era => {
-      buttons.forEach(button => button.classList.toggle("ativo", button.dataset.era === era));
-      cards.forEach(card => {
+    const filter = (era) => {
+      buttons.forEach((button) =>
+        button.classList.toggle("ativo", button.dataset.era === era),
+      );
+      let visible = 0;
+      cards.forEach((card) => {
         const match = era === "todos" || card.dataset.era === era;
         card.hidden = !match;
+        card.classList.remove("lado-dir");
+        if (match) {
+          if (visible % 2 === 1) card.classList.add("lado-dir");
+          visible++;
+        }
       });
     };
 
-    buttons.forEach(button => button.addEventListener("click", () => filter(button.dataset.era)));
+    buttons.forEach((button) =>
+      button.addEventListener("click", () => filter(button.dataset.era)),
+    );
     filter("todos");
   }
 
