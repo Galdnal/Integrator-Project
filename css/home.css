@@ -151,5 +151,12 @@
     grid-template-columns: 1fr;
     gap: 22px;
   }
-  .card { min-height: 330px; }
+  .card { min-height: 330px;
+  }
+  
+  .btn {
+    width: 150px;
+    height: 40px;
+    padding: 10px 20px;
+  }
 }
