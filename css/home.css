@@ -52,6 +52,26 @@
   animation: entrada 1s ease both;
 }
 
+.btn {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  animation: entrada 1s ease both;
+  background-color: var(--marrom-card);
+  border-radius: 50px;
+  width: 200px;
+  height: 50px;
+  padding: 15px 30px;
+  transition:ease-in-out 0.3s; 
+}
+
+.btn:hover {
+  box-shadow: #757474 3px 3px 6px;
+  color: #ede8d0;
+  background: var(--marrom-escuro);
+}
 .cards {
   width: min(1160px, calc(100% - 36px));
   margin: auto;
