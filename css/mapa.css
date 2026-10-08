@@ -233,6 +233,18 @@
   left: 68%;
   top: 27%;
 }
+.pin-inuit {
+  left: 25%;
+  top: 18%;
+}
+.pin-cristianismo {
+  left: 53.5%;
+  top: 31%;
+}
+.pin-budismo {
+  left: 75%;
+  top: 43%;
+}
 .map-info {
   padding: 38px;
   display: flex;
