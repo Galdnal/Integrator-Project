@@ -184,6 +184,7 @@
 .map-pin:hover,
 .map-pin:focus,
 .map-pin.selecionado {
+  z-index: 20;
   transform: translate(-50%, -50%) scale(1.08);
   background: #fff9eb;
   box-shadow:
@@ -194,11 +195,12 @@
 .map-pin:hover::before,
 .map-pin:focus::before,
 .map-pin.selecionado::before {
+  z-index: 21;
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 .pin-grecia {
-  left: 55.1%;
+  left: 52.5%;
   top: 25.8%;
 }
 .pin-maia {
@@ -238,12 +240,17 @@
   top: 18%;
 }
 .pin-cristianismo {
-  left: 58.5%;
-  top: 32%;
+  left: 60.5%;
+  top: 30%;
 }
 .pin-cristianismo i {
   top: auto;
   bottom: calc(100% + 5px);
+}
+.pin-arabia::before,
+.pin-india::before {
+  right: auto;
+  left: calc(100% + 9px);
 }
 .pin-budismo {
   left: 75%;
@@ -396,8 +403,12 @@
     top: 38%;
   }
   .pin-cristianismo {
-    left: 58%;
-    top: 32%;
+    left: 60%;
+    top: 30%;
+  }
+  .pin-grecia {
+    left: 52.5%;
+    top: 25.8%;
   }
   .map-pin::before {
     display: none;
