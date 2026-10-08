@@ -3,6 +3,12 @@
 }
 
 /* BANNER */
+.map-hero h1 {
+  font-family: "Rye", Georgia, serif;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 1;
+  margin: 16px 0 20px;
+}
 
 .banner {
   position: relative;
