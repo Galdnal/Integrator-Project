@@ -240,17 +240,31 @@
   top: 18%;
 }
 .pin-cristianismo {
-  left: 60.5%;
-  top: 30%;
+  left: 57.5%;
+  top: 32%;
 }
 .pin-cristianismo i {
   top: auto;
   bottom: calc(100% + 5px);
 }
-.pin-arabia::before,
-.pin-india::before {
+
+.pin-cristianismo::before {
   right: auto;
   left: calc(100% + 9px);
+  bottom: auto;
+  top: 0;
+}
+.pin-arabia::before {
+  right: auto;
+  left: calc(100% + 9px);
+}
+
+/* Mantém o balão do Hinduísmo voltado para longe do Japão. */
+.pin-india::before {
+  right: calc(100% + 9px);
+  left: auto;
+  bottom: auto;
+  top: 100%;
 }
 .pin-budismo {
   left: 75%;
@@ -403,8 +417,8 @@
     top: 38%;
   }
   .pin-cristianismo {
-    left: 60%;
-    top: 30%;
+    left: 57.5%;
+    top: 32%;
   }
   .pin-grecia {
     left: 52.5%;
