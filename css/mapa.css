@@ -238,8 +238,12 @@
   top: 18%;
 }
 .pin-cristianismo {
-  left: 53.5%;
-  top: 31%;
+  left: 58.5%;
+  top: 32%;
+}
+.pin-cristianismo i {
+  top: auto;
+  bottom: calc(100% + 5px);
 }
 .pin-budismo {
   left: 75%;
@@ -390,6 +394,10 @@
   .pin-arabia {
     left: 60.8%;
     top: 38%;
+  }
+  .pin-cristianismo {
+    left: 58%;
+    top: 32%;
   }
   .map-pin::before {
     display: none;
