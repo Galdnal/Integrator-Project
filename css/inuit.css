@@ -1,0 +1,53 @@
+.inuit-hero {
+  min-height: 430px;
+  padding: 120px 20px 75px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--creme);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(224, 185, 47, 0.16), transparent 28rem),
+    linear-gradient(135deg, #263f4a, #43220f);
+}
+.inuit-hero span {
+  font-size: .75rem;
+  letter-spacing: .3em;
+  color: var(--ouro);
+  font-weight: 700;
+}
+.inuit-hero h1 {
+  font-family: "Rye", Georgia, serif;
+  font-size: clamp(46px, 7vw, 82px);
+  line-height: 1.05;
+  margin: 14px 0;
+}
+.inuit-hero p {
+  max-width: 700px;
+  color: rgba(245, 233, 212, .86);
+  line-height: 1.7;
+}
+.inuit-content {
+  width: min(1100px, calc(100% - 32px));
+  margin: 25px auto 0;
+}
+.inuit-content .texto {
+  border-radius: 20px;
+  padding: 28px;
+}
+.inuit-content .maia-text h3 {
+  color: var(--creme);
+}
+.inuit-content .maia-text p {
+  font-size: clamp(16px, 1.7vw, 20px);
+}
+.inuit-note {
+  padding: 12px 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--marrom-texto);
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .inuit-hero { min-height: 360px; padding: 110px 20px 55px; }
+  .inuit-content .texto { padding: 22px 18px; }
+}
