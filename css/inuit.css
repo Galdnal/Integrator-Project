@@ -51,3 +51,58 @@
   .inuit-hero { min-height: 360px; padding: 110px 20px 55px; }
   .inuit-content .texto { padding: 22px 18px; }
 }
+
+
+/* Galeria visual da cultura Inuit */
+.inuit-galeria {
+  margin: 42px 0;
+}
+.inuit-galeria h2 {
+  color: var(--creme);
+  font-family: "Rye", Georgia, serif;
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 12px;
+}
+.inuit-galeria-intro {
+  color: rgba(245, 233, 212, .86);
+  line-height: 1.7;
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+.inuit-galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.inuit-galeria figure {
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(245,233,212,.18);
+}
+.inuit-galeria figure img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background: #263f4a;
+}
+.inuit-galeria figcaption {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  color: var(--creme);
+  line-height: 1.55;
+}
+.inuit-galeria figcaption span {
+  opacity: .88;
+}
+.inuit-galeria figcaption a {
+  color: var(--ouro);
+  width: fit-content;
+  text-underline-offset: 3px;
+}
+@media (max-width: 650px) {
+  .inuit-galeria-grid { grid-template-columns: 1fr; }
+  .inuit-galeria figure img { height: 240px; }
+}
