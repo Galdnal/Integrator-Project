@@ -442,3 +442,20 @@
     animation: none;
   }
 }
+
+
+/* Ícone ilustrado do pin Iorubá: ocupa o círculo sem o glifo antigo. */
+.map-pin .pin-ioruba-img {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.map-pin .pin-ioruba-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
