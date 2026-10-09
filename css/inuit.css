@@ -106,3 +106,19 @@
   .inuit-galeria-grid { grid-template-columns: 1fr; }
   .inuit-galeria figure img { height: 240px; }
 }
+
+
+/* Placeholders para futuras imagens da mitologia Inuit */
+.inuit-galeria { margin: 42px 0; }
+.inuit-galeria h2 { color: var(--creme); font-family: "Rye", Georgia, serif; font-size: clamp(28px, 4vw, 42px); margin-bottom: 12px; }
+.inuit-galeria-intro { color: rgba(245, 233, 212, .86); line-height: 1.7; max-width: 760px; margin-bottom: 22px; }
+.inuit-galeria-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.inuit-placeholder { overflow: hidden; border-radius: 18px; background: rgba(255,255,255,.07); border: 1px solid rgba(245,233,212,.18); }
+.inuit-placeholder-visual { min-height: 230px; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; color: #f5e9d4; background: linear-gradient(145deg, #263f4a, #43220f); }
+.inuit-placeholder-visual span { font-size: 12px; letter-spacing: .18em; color: var(--ouro); }
+.inuit-placeholder-visual strong { font-family: "Rye", Georgia, serif; font-size: 24px; }
+.inuit-placeholder-visual small { max-width: 220px; line-height: 1.5; opacity: .85; }
+.inuit-placeholder figcaption { display: grid; gap: 8px; padding: 17px; color: var(--creme); line-height: 1.55; }
+.inuit-placeholder figcaption span { opacity: .88; }
+@media (max-width: 850px) { .inuit-galeria-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .inuit-galeria-grid { grid-template-columns: 1fr; } .inuit-placeholder-visual { min-height: 190px; } }
