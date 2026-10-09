@@ -453,9 +453,9 @@
   padding: 5px;
   box-sizing: border-box;
 }
-.map-pin .pin-ioruba-img img {
+.map-pin .pin-ioruba-img svg {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  overflow: visible;
 }
