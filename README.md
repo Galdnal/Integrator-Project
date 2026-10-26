@@ -83,4 +83,16 @@ Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layo
 * ### 🗓️ Reunião 9: Código e Design (29/08/2026)
 
 *  **Falta:** Richard e Ryan(sem justificativa)
-*  **o que fizemos:**Júlia e Livia estavam trabalhando no figma, Philip estava mexendo no código do css e do Html e o Guilherme estava fazendo o wireframe(rascunho)
+*  **o que fizemos:** Júlia e Livia estavam trabalhando no figma, Philip estava mexendo no código do css e do Html e o Guilherme estava fazendo o wireframe(rascunho)
+
+* ### PÓS SEPE!!
+
+* ### 🗓️ Reunião 10: Reunião  (19/10/2026)
+* **Falta:** Guilherme e Richard
+* **OBSERVAÇÕES DA SEPE:**
+* 
+  
+
+* ### 🗓️ Reunião 11: Reajustes  (26/10/2026)
+* **Falta:** Jùlia, Livia e Richard
+  
