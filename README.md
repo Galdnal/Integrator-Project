@@ -92,7 +92,7 @@ Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layo
 * ### OBSERVAÇÕES DA SEPE:
 * **livia:** Durante a Sepe, gostei muito do nosso site, foi um site bem estruturado, bonito, e um desing único, principalmente pelo site ser inteiro feito a mão sem nenhuma inteligência artificial, o grupo todo participou, levou bastante trabalho principalmente para o design do site e nas pesquisas sem nenhuma inteligência artificial.
 * **Guilherme:** Na minha visão a sepe foi um momento marcante, acho q nosso site ficou em um resultado esperado, tem coisas q ainda temos melhorar mas em geral ficou um bom site e um bom trabalho
-* **Júlia:** 
+* **Júlia:**
 * **Richard:** 
 * **Ryan:** Achei a atividade bastante interessante embora tenha sido um pouco complicada e difícil, apesar dos desafios gostei muito de realizar algo diferente com meus amigos. A parte que considerei mais difícil foi a pesquisa pois exigiu mais dedicação e esforço, no entanto, de modo geral foi uma experiência muito positiva divertida e enriquecedora.
 * **Philip:** Durante a SEPE, fiquei muito feliz com o resultado do nosso site, principalmente pelo design e pelo esforço de todo o grupo. Foi uma experiência marcante, e, apesar de termos coisas para melhorar, considero que fizemos um ótimo trabalho.
@@ -102,5 +102,9 @@ Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layo
 * ### 🗓️ Reunião 11: Reajustes  (26/10/2026)
 * **Falta:** Jùlia, Livia e Richard (sem justificativa)
   **QUAIS SERÂO OS REAJUSTES:**
+* Padronização dos banners;
+* Ajustes de textos, tamanho das fontes e etc;
+* Redesign de algumas páginas;
+* 
   
   
