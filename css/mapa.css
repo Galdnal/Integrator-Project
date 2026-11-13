@@ -1,461 +1,92 @@
 .map-hero {
-  min-height: 430px;
-  display: grid;
-  place-items: center;
-  text-align: center;
   padding: 120px 20px 70px;
-  background:
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(224, 185, 47, 0.2),
-      transparent 28rem
-    ),
-    linear-gradient(135deg, #5f321d, #43220f);
+  text-align: center;
   color: var(--creme);
-  overflow: hidden;
+  background: linear-gradient(135deg, #5f321d, #43220f);
 }
-.map-hero span {
-  font-size: 0.78rem;
-  letter-spacing: 0.3em;
-  color: var(--ouro);
-  font-weight: 700;
-}
-.map-hero h1 {
-  font-family: "Rye", Georgia, serif;
-  font-size: clamp(42px, 7vw, 78px);
-  line-height: 1;
-  margin: 16px 0 20px;
-}
-.map-hero p {
-  max-width: 650px;
-  margin: auto;
-  color: rgba(245, 233, 212, 0.82);
-  line-height: 1.7;
-}
-.map-page {
-  width: min(1200px, calc(100% - 32px));
-  margin: -50px auto 0;
-  position: relative;
-  z-index: 2;
-}
-.map-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.65fr);
-  gap: 22px;
-  align-items: stretch;
-}
+.map-hero span { font-size: 12px; letter-spacing: 4px; color: var(--ouro); }
+.map-hero h1 { font-family: "Rye", Georgia, serif; font-size: 60px; margin: 14px 0; }
+.map-hero p { max-width: 650px; margin: 0 auto; line-height: 1.7; }
+
+.map-page { width: 95%; max-width: 1200px; margin: 30px auto 0; }
+
+.map-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+
 .map-card,
 .map-info {
-  background: rgba(245, 233, 212, 0.96);
-  border: 1px solid rgba(67, 34, 15, 0.1);
-  border-radius: 32px;
-  box-shadow: var(--sombra);
+  background-color: var(--creme);
+  border-radius: 25px;
   overflow: hidden;
 }
-.map-surface {
-  position: relative;
-  min-height: 650px;
-  isolation: isolate;
-  background:
-    radial-gradient(
-      circle at 50% 48%,
-      rgba(212, 178, 0, 0.14),
-      transparent 38%
-    ),
-    #d7c5a5;
-  overflow: hidden;
-}
-.map-surface::before {
-  content: "";
-  position: absolute;
-  inset: 7%;
-  border: 1px dashed rgba(67, 34, 15, 0.18);
-  border-radius: 50%;
-  transform: rotate(-8deg);
-}
-.map-image-layer {
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 50%;
-  width: 94%;
-  aspect-ratio: 2754 / 1398;
-  transform: translate(-50%, -50%);
-  container-type: inline-size;
-}
-.world-map-image {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0.78;
-  filter: sepia(0.18) saturate(0.72) contrast(0.92);
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-.map-pin-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  pointer-events: none;
-}
-.continent {
-  position: absolute;
-  background: #96744e;
-  border: 2px solid rgba(67, 34, 15, 0.15);
-  border-radius: 45% 55% 48% 52%;
-  transform: rotate(-8deg);
-}
+
+.map-image-layer { position: relative; }
+.world-map-image { width: 100%; display: block; opacity: 0.8; }
+.map-pin-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
 .map-pin {
   position: absolute;
-  z-index: 4;
-  pointer-events: auto;
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-  color: var(--marrom-escuro);
-  width: clamp(38px, 5.2%, 56px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--creme);
-  border: 2px solid var(--ouro);
-  transform: translate(-50%, -50%);
-  box-shadow:
-    0 0 0 0 rgba(224, 185, 47, 0.5),
-    0 8px 18px rgba(67, 34, 15, 0.22);
-  transition:
-    transform var(--transicao),
-    box-shadow var(--transicao),
-    background var(--transicao);
-  animation: mapPulse 2.8s ease-in-out infinite;
-}
-.map-pin span {
-  font-size: clamp(16px, 2.5cqw, 23px);
-  font-weight: 700;
-  line-height: 1;
-}
-.map-pin i {
-  position: absolute;
-  top: calc(100% + 5px);
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  font-size: clamp(9px, 1.25cqw, 12px);
-  line-height: 1.1;
-  text-shadow:
-    0 0 3px #efe6d3,
-    0 0 3px #efe6d3,
-    0 0 6px #efe6d3;
-  pointer-events: none;
-  font-style: normal;
-  font-weight: 700;
-  color: var(--marrom-escuro);
-  opacity: 1;
-}
-.pin-grecia i,
-.pin-punjab i {
-  top: auto;
-  bottom: calc(100% + 5px);
-}
-.map-pin::before {
-  content: "";
-  position: absolute;
-  right: calc(100% + 9px);
-  bottom: 100%;
-  width: max-content;
-  max-width: 190px;
-  padding: 9px 12px;
-  border-radius: 12px;
-  background: var(--marrom-escuro);
-  color: var(--creme);
-  font-size: 11px;
-  line-height: 1.35;
-  box-shadow: var(--sombra);
-  opacity: 0;
-  transform: translateY(5px) scale(0.96);
-  pointer-events: none;
-  transition:
-    opacity var(--transicao),
-    transform var(--transicao);
-  content: attr(data-title) " · " attr(data-symbol);
-}
-.map-pin:hover,
-.map-pin:focus,
-.map-pin.selecionado {
-  z-index: 20;
-  transform: translate(-50%, -50%) scale(1.08);
-  background: #fff9eb;
-  box-shadow:
-    0 0 0 9px rgba(224, 185, 47, 0.16),
-    0 12px 24px rgba(67, 34, 15, 0.25);
-  animation: none;
-}
-.map-pin:hover::before,
-.map-pin:focus::before,
-.map-pin.selecionado::before {
-  z-index: 21;
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.pin-grecia {
-  left: 52.5%;
-  top: 25.8%;
-}
-.pin-maia {
-  left: 26.6%;
-  top: 38.2%;
-}
-.pin-ioruba {
-  left: 51.1%;
-  top: 45%;
-}
-.pin-inca {
-  left: 31.1%;
-  top: 57.8%;
-}
-.pin-japao {
-  left: 84.2%;
-  top: 27.7%;
-}
-.pin-nz {
-  left: 92.1%;
-  top: 75.4%;
-}
-.pin-india {
-  left: 71%;
-  top: 38.5%;
-}
-.pin-arabia {
-  left: 60.3%;
-  top: 36.4%;
-}
-.pin-punjab {
-  left: 68%;
-  top: 27%;
-}
-.pin-inuit {
-  left: 25%;
-  top: 18%;
-}
-.pin-cristianismo {
-  left: 57.5%;
-  top: 32%;
-}
-.pin-cristianismo i {
-  top: auto;
-  bottom: calc(100% + 5px);
-}
-
-.pin-cristianismo::before {
-  right: auto;
-  left: calc(100% + 9px);
-  bottom: auto;
-  top: 0;
-}
-.pin-arabia::before {
-  right: auto;
-  left: calc(100% + 9px);
-}
-
-/* Mantém o balão do Hinduísmo voltado para longe do Japão. */
-.pin-india::before {
-  right: calc(100% + 9px);
-  left: auto;
-  bottom: auto;
-  top: 100%;
-}
-.pin-budismo {
-  left: 75%;
-  top: 43%;
-}
-.map-info {
-  padding: 38px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 650px;
-}
-.map-symbol {
-  width: 72px;
-  height: 72px;
-  display: grid;
-  place-items: center;
-  border-radius: 22px;
-  background: var(--marrom-escuro);
-  color: var(--ouro);
-  font-size: 34px;
-  margin-bottom: 24px;
-}
-.map-kicker {
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  color: var(--marrom-texto-claro);
-  font-weight: 700;
-}
-.map-info h2 {
-  font-family: "Rye", Georgia, serif;
-  font-size: clamp(29px, 4vw, 46px);
-  margin: 10px 0 16px;
-}
-.map-info p {
-  line-height: 1.75;
-  color: var(--marrom-texto);
-  font-size: 15px;
-}
-.map-cta {
-  margin-top: 25px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 15px 17px;
-  border-radius: 16px;
-  background: var(--marrom-escuro);
-  color: var(--creme);
-  text-decoration: none;
-  font-weight: 600;
-  transition:
-    transform var(--transicao),
-    background var(--transicao);
-}
-.map-cta:hover {
-  transform: translateY(-2px);
-  background: var(--marrom-medio);
-}
-.map-cta span {
-  font-size: 22px;
-}
-.map-legend {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin: 15px 4px 0;
-  color: var(--marrom-texto);
-  font-size: 12px;
-}
-.pulse-demo {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: var(--ouro);
-  box-shadow: 0 0 0 6px rgba(224, 185, 47, 0.15);
-  margin-right: 7px;
+  background-color: var(--creme);
+  border: 2px solid var(--ouro);
+  color: var(--marrom-escuro);
+  font-size: 18px;
 }
-@keyframes mapPulse {
-  0%,
-  100% {
-    box-shadow:
-      0 0 0 0 rgba(224, 185, 47, 0.42),
-      0 8px 18px rgba(67, 34, 15, 0.22);
-  }
-  50% {
-    box-shadow:
-      0 0 0 10px rgba(224, 185, 47, 0),
-      0 8px 18px rgba(67, 34, 15, 0.22);
-  }
+
+.map-pin:hover { background-color: var(--ouro); }
+.pin-ioruba-img svg { width: 24px; height: 24px; }
+
+.map-pin i {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background-color: var(--marrom-escuro);
+  color: var(--creme);
+  font-size: 12px;
+  font-style: normal;
+  white-space: nowrap;
 }
-.region-highlight {
-  animation: regionFlash 1s ease 2;
+.map-pin:hover i { display: block; }
+
+.pin-grecia { left: 52.5%; top: 25.8%; }
+.pin-maia { left: 26.6%; top: 38.2%; }
+.pin-ioruba { left: 51.1%; top: 45%; }
+.pin-inca { left: 31.1%; top: 57.8%; }
+.pin-japao { left: 84.2%; top: 27.7%; }
+.pin-nz { left: 92.1%; top: 75.4%; }
+.pin-india { left: 71%; top: 38.5%; }
+.pin-arabia { left: 60.3%; top: 36.4%; }
+.pin-punjab { left: 68%; top: 27%; }
+.pin-inuit { left: 25%; top: 18%; }
+.pin-cristianismo { left: 57.5%; top: 32%; }
+.pin-budismo { left: 75%; top: 43%; }
+
+.map-info { padding: 30px; text-align: center; }
+.map-symbol { display: block; font-size: 50px; margin-bottom: 10px; }
+.map-kicker { font-size: 12px; letter-spacing: 3px; color: var(--marrom-texto-claro); }
+.map-info h2 { font-size: 30px; margin: 10px 0; }
+.map-info p { line-height: 1.6; margin-bottom: 20px; }
+
+.map-cta {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background-color: var(--marrom-escuro);
+  color: var(--creme);
 }
-@keyframes regionFlash {
-  0%,
-  100% {
-    filter: none;
-  }
-  50% {
-    filter: drop-shadow(0 0 14px var(--ouro));
-    transform: translateY(-5px) scale(1.03);
-  }
-}
+.map-cta:hover { background-color: var(--marrom-medio); }
+
+.map-legend { margin-top: 15px; text-align: center; font-size: 14px; }
+
 @media (max-width: 900px) {
-  .map-layout {
-    grid-template-columns: 1fr;
-  }
-  .map-info {
-    min-height: 0;
-  }
-  .map-surface {
-    min-height: 560px;
-  }
-}
-@media (max-width: 600px) {
-  .map-page {
-    width: min(100% - 20px, 500px);
-    margin: -35px auto 0;
-  }
-  .map-surface {
-    min-height: 500px;
-  }
-  .map-pin {
-    width: 34px;
-  }
-  .map-pin span {
-    font-size: 16px;
-  }
-  .map-pin i {
-    font-size: 9px;
-    top: calc(100% + 3px);
-  }
-  .pin-grecia i,
-  .pin-punjab i {
-    top: auto;
-    bottom: calc(100% + 3px);
-  }
-  .pin-punjab {
-    left: 66.5%;
-    top: 23.5%;
-  }
-  .pin-india {
-    left: 71.5%;
-    top: 41%;
-  }
-  .pin-arabia {
-    left: 60.8%;
-    top: 38%;
-  }
-  .pin-cristianismo {
-    left: 57.5%;
-    top: 32%;
-  }
-  .pin-grecia {
-    left: 52.5%;
-    top: 25.8%;
-  }
-  .map-pin::before {
-    display: none;
-  }
-  .map-info {
-    padding: 27px;
-  }
-  .map-legend {
-    flex-direction: column;
-  }
-  .map-hero {
-    min-height: 390px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .map-pin {
-    animation: none;
-  }
-}
-
-
-/* Ícone ilustrado do pin Iorubá: ocupa o círculo sem o glifo antigo. */
-.map-pin .pin-ioruba-img {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  box-sizing: border-box;
-}
-.map-pin .pin-ioruba-img svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
+  .map-layout { grid-template-columns: 1fr; }
+  .map-pin { width: 30px; height: 30px; font-size: 14px; }
 }
