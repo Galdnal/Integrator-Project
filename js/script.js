@@ -1,218 +1,75 @@
-(function () {
-  "use strict";
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
+var botaoTopo = document.getElementById("back-to-top");
 
-  function initBackToTop() {
-    const btn = document.getElementById("back-to-top");
-    if (!btn) return;
-
-    const toggle = () => btn.classList.toggle("visible", window.scrollY > 420);
-    window.addEventListener("scroll", toggle, { passive: true });
-    toggle();
-
-    btn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: prefersReducedMotion ? "auto" : "smooth",
-      });
-    });
-  }
-
-  function initScrollReveal() {
-    const elements = document.querySelectorAll(
-      [
-        ".overview",
-        ".linha-amarela",
-        ".card",
-        ".gen",
-        ".grid-deuses",
-        ".urano",
-        ".texto",
-        ".texto-amarelo",
-        ".card-mitology-base",
-        ".card--religion-practice",
-        ".card--connection",
-        ".card--comparison",
-        ".timeline-container",
-        ".section-title",
-        ".cards",
-        ".civilizacao",
-        ".intro-bloco",
-        ".secao-titulo",
-        ".grid-religioes",
-        ".bloco-curiosidades",
-        ".map-panel",
-        ".map-info",
-        ".era-card",
-      ].join(", "),
-    );
-
-    if (!elements.length) return;
-
-    const reveal = (el) => (el.style.animationPlayState = "running");
-
-    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-      elements.forEach(reveal);
-      return;
+if (botaoTopo) {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 400) {
+      botaoTopo.classList.add("visible");
+    } else {
+      botaoTopo.classList.remove("visible");
     }
-
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          reveal(entry.target);
-          obs.unobserve(entry.target);
-        });
-      },
-      { threshold: 0, rootMargin: "0px 0px -8% 0px" },
-    );
-
-    elements.forEach((el) => observer.observe(el));
-  }
-
-  function initHeader() {
-    const header = document.querySelector("header");
-    const nav = header?.querySelector("nav");
-    const list = header?.querySelector("ul");
-    if (!header || !nav || !list) return;
-
-    let toggle = nav.querySelector(".menu-toggle");
-    if (!toggle) {
-      toggle = document.createElement("button");
-      toggle.className = "menu-toggle";
-      toggle.type = "button";
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-controls", "site-navigation");
-      toggle.setAttribute("aria-label", "Abrir menu");
-      toggle.innerHTML = "☰";
-      nav.prepend(toggle);
-    }
-    list.id = "site-navigation";
-
-    const closeMenu = () => {
-      list.classList.remove("aberto");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Abrir menu");
-      toggle.innerHTML = "☰";
-    };
-
-    toggle.addEventListener("click", () => {
-      const open = list.classList.toggle("aberto");
-      toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-      toggle.innerHTML = open ? "×" : "☰";
-    });
-
-    list
-      .querySelectorAll("a")
-      .forEach((link) => link.addEventListener("click", closeMenu));
-
-    const onScroll = () =>
-      header.classList.toggle("rolando", window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
-
-  function initRegionHighlight() {
-    const key = new URLSearchParams(window.location.search).get("local");
-    if (!key) return;
-
-    const targets = document.querySelectorAll("[data-region]");
-    const target = [...targets].find((el) => el.dataset.region === key);
-    if (!target) return;
-
-    target.classList.add("region-highlight");
-    target.setAttribute("tabindex", "-1");
-
-    window.setTimeout(
-      () =>
-        target.scrollIntoView({
-          behavior: prefersReducedMotion ? "auto" : "smooth",
-          block: "center",
-        }),
-      180,
-    );
-
-    window.setTimeout(() => target.classList.remove("region-highlight"), 4200);
-  }
-
-  function initMap() {
-    const map = document.querySelector("[data-world-map]");
-    if (!map) return;
-
-    const buttons = map.querySelectorAll("[data-map-link]");
-    const panel = document.querySelector("[data-map-panel]");
-    const title = panel?.querySelector("[data-map-title]");
-    const description = panel?.querySelector("[data-map-description]");
-    const symbol = panel?.querySelector("[data-map-symbol]");
-    const cta = panel?.querySelector(".map-cta");
-
-    const select = (button) => {
-      buttons.forEach((item) => item.classList.remove("selecionado"));
-      button.classList.add("selecionado");
-      if (title) title.textContent = button.dataset.title || "";
-      if (description)
-        description.textContent = button.dataset.description || "";
-      if (symbol) symbol.textContent = button.dataset.symbol || "✦";
-      if (cta) cta.href = button.dataset.href || button.getAttribute("href");
-    };
-
-    buttons.forEach((button) => {
-      button.addEventListener("mouseenter", () => select(button));
-      button.addEventListener("focus", () => select(button));
-      button.addEventListener("click", (event) => {
-        // O pin só seleciona; quem abre a subpágina é o botão "Explorar conteúdo".
-        event.preventDefault();
-        select(button);
-        if (window.matchMedia("(max-width: 900px)").matches && panel) {
-          panel.scrollIntoView({
-            behavior: prefersReducedMotion ? "auto" : "smooth",
-            block: "center",
-          });
-        }
-      });
-    });
-
-    if (buttons[0]) select(buttons[0]);
-  }
-
-  function initTimeline() {
-    const timeline = document.querySelector("[data-timeline]");
-    if (!timeline) return;
-
-    const buttons = timeline.querySelectorAll("[data-era]");
-    const cards = timeline.querySelectorAll(".era-card");
-    const filter = (era) => {
-      buttons.forEach((button) =>
-        button.classList.toggle("ativo", button.dataset.era === era),
-      );
-      let visible = 0;
-      cards.forEach((card) => {
-        const match = era === "todos" || card.dataset.era === era;
-        card.hidden = !match;
-        card.classList.remove("lado-dir");
-        if (match) {
-          if (visible % 2 === 1) card.classList.add("lado-dir");
-          visible++;
-        }
-      });
-    };
-
-    buttons.forEach((button) =>
-      button.addEventListener("click", () => filter(button.dataset.era)),
-    );
-    filter("todos");
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    initBackToTop();
-    initScrollReveal();
-    initHeader();
-    initRegionHighlight();
-    initMap();
-    initTimeline();
   });
-})();
+
+  botaoTopo.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+var nav = document.querySelector("header nav");
+var lista = document.querySelector("header nav ul");
+
+if (nav && lista) {
+  var botaoMenu = document.createElement("button");
+  botaoMenu.className = "menu-toggle";
+  botaoMenu.textContent = "☰";
+  botaoMenu.setAttribute("aria-label", "Abrir menu");
+  nav.prepend(botaoMenu);
+
+  botaoMenu.addEventListener("click", function () {
+    lista.classList.toggle("aberto");
+  });
+}
+
+var pins = document.querySelectorAll("[data-map-link]");
+var titulo = document.querySelector("[data-map-title]");
+var descricao = document.querySelector("[data-map-description]");
+var simbolo = document.querySelector("[data-map-symbol]");
+var botaoExplorar = document.querySelector(".map-cta");
+
+function selecionar(pin) {
+  titulo.textContent = pin.dataset.title;
+  descricao.textContent = pin.dataset.description;
+  simbolo.textContent = pin.dataset.symbol;
+  botaoExplorar.href = pin.dataset.href;
+}
+
+if (titulo && pins.length > 0) {
+  for (var i = 0; i < pins.length; i++) {
+    pins[i].addEventListener("mouseenter", function () {
+      selecionar(this);
+    });
+    pins[i].addEventListener("click", function (evento) {
+      evento.preventDefault();
+      selecionar(this);
+    });
+  }
+  selecionar(pins[0]);
+}
+
+var botoesEra = document.querySelectorAll(".era-controls > button");
+var cardsEra = document.querySelectorAll(".era-card");
+
+for (var j = 0; j < botoesEra.length; j++) {
+  botoesEra[j].addEventListener("click", function () {
+    var era = this.dataset.era;
+
+    for (var k = 0; k < botoesEra.length; k++) {
+      botoesEra[k].classList.remove("ativo");
+    }
+    this.classList.add("ativo");
+
+    for (var m = 0; m < cardsEra.length; m++) {
+      cardsEra[m].hidden = era !== "todos" && cardsEra[m].dataset.era !== era;
+    }
+  });
+}
