@@ -44,9 +44,6 @@ function selecionar(pin) {
 
 if (titulo && pins.length > 0) {
   for (var i = 0; i < pins.length; i++) {
-    pins[i].addEventListener("mouseenter", function () {
-      selecionar(this);
-    });
     pins[i].addEventListener("click", function (evento) {
       evento.preventDefault();
       selecionar(this);
