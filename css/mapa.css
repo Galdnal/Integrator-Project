@@ -90,3 +90,6 @@
   .map-layout { grid-template-columns: 1fr; }
   .map-pin { width: 30px; height: 30px; font-size: 14px; }
 }
+
+.map-surface { background-color: #d7c5a5; }
+.pulse-demo { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background-color: var(--ouro); }

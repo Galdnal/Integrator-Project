@@ -81,3 +81,9 @@ main h2 { text-align: center; font-size: 30px; margin: 10px 0; }
   .budismo-images,
   .sikhismo-images { grid-template-columns: 1fr; gap: 20px; padding: 0 15px; }
 }
+
+.overview { text-align: center; padding: 10px 30px; }
+.overview h2 { font-size: 28px; padding: 5px; }
+.overview p { max-width: 850px; margin: auto; font-size: 15px; line-height: 1.4; }
+
+.linha-amarela { width: 100%; height: 2px; margin: 5px auto; background-color: var(--amarelo-linha); }
