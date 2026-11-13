@@ -99,13 +99,6 @@ Nós nos reunimos para dividir o grupo em dois, a parte visual e a parte do layo
   
   
 
-* ### 🗓️ Reunião 11: Reajustes  (26/10/2026)
-* **Falta:** Livia e Richard (sem justificativa) Jùlia (justificada) 
-* 
-  **QUAIS SERÂO OS REAJUSTES:**
-* Padronização dos banners;
-* Ajustes de textos, tamanho das fontes e etc;
-* Redesign de algumas páginas;
-* 
+
   
   
