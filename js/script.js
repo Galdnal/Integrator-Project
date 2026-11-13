@@ -1,4 +1,3 @@
-
 var botaoTopo = document.getElementById("back-to-top");
 
 if (botaoTopo) {
