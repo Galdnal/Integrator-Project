@@ -29,7 +29,7 @@ if (nav && lista) {
   });
 }
 
-var pins = document.querySelectorAll("[data-map-link]");
+var pins = document.querySelectorAll("[data-world-map] [data-map-link]");
 var titulo = document.querySelector("[data-map-title]");
 var descricao = document.querySelector("[data-map-description]");
 var simbolo = document.querySelector("[data-map-symbol]");
