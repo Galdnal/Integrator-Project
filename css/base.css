@@ -50,6 +50,7 @@ header nav a {
   padding: 8px 14px;
   color: var(--creme);
   border-radius: 20px;
+   transition:all 0.3s ease;
 }
 
 header nav a:hover,
