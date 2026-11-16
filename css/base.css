@@ -53,7 +53,8 @@ header nav a {
 }
 
 header nav a:hover,
-header nav a.atual { background-color: var(--marrom-medio); }
+header nav a.atual { text-decoration: underline 2px solid #d4b200;
+  background-color: var(--marrom-medio); }
 
 .menu-toggle {
   display: none;
