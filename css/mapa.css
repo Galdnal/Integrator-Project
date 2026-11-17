@@ -93,3 +93,27 @@
 
 .map-surface { background-color: #d7c5a5; }
 .pulse-demo { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background-color: var(--ouro); }
+
+
+/* ---- Seleção de pins sem JavaScript ----
+   Cada pin é um <label> ligado a um radio escondido (mesmo id).
+   Quando o radio está marcado (:checked), mostramos o painel dele. */
+
+.map-radio { display: none; }      /* esconde as bolinhas de radio */
+.map-pin { cursor: pointer; }
+.map-panel { display: none; }      /* todos os painéis começam escondidos */
+
+#sel-grecia:checked ~ .map-info .panel-grecia,
+#sel-maia:checked ~ .map-info .panel-maia,
+#sel-ioruba:checked ~ .map-info .panel-ioruba,
+#sel-inca:checked ~ .map-info .panel-inca,
+#sel-japao:checked ~ .map-info .panel-japao,
+#sel-nz:checked ~ .map-info .panel-nz,
+#sel-india:checked ~ .map-info .panel-india,
+#sel-arabia:checked ~ .map-info .panel-arabia,
+#sel-punjab:checked ~ .map-info .panel-punjab,
+#sel-inuit:checked ~ .map-info .panel-inuit,
+#sel-cristianismo:checked ~ .map-info .panel-cristianismo,
+#sel-budismo:checked ~ .map-info .panel-budismo {
+  display: block;                  /* só o painel do pin marcado aparece */
+}

@@ -10,7 +10,7 @@
 
 .era-page { width: 90%; max-width: 1000px; margin: 30px auto 0; }
 
-.era-controls > button {
+.era-controls > label {
   margin: 0 5px 10px 0;
   padding: 10px 15px;
   border: 1px solid var(--marrom-escuro);
@@ -18,9 +18,12 @@
   background-color: transparent;
   color: var(--marrom-escuro);
   cursor: pointer;
+  display: inline-block;
 }
-.era-controls > button:hover,
-.era-controls > button.ativo { background-color: var(--marrom-escuro); color: var(--creme); }
+.era-controls > label:hover,
+#era-todos:checked ~ label[for="era-todos"],
+#era-antiguidade:checked ~ label[for="era-antiguidade"],
+#era-medieval:checked ~ label[for="era-medieval"] { background-color: var(--marrom-escuro); color: var(--creme); }
 
 .timeline,
 .era-dot { display: none; }
@@ -38,3 +41,18 @@
 .era-card h2 { font-size: 22px; margin-bottom: 8px; }
 .era-card p { line-height: 1.5; margin-bottom: 8px; }
 .era-card small { color: var(--marrom-texto); }
+
+/* ---- Filtro por época sem JavaScript ----
+   Mesma ideia do mapa: radio escondido + label no lugar do botão. */
+
+.era-radio { display: none; }
+
+/* quando "Antiguidade" está marcada, esconde os cards que NÃO são dela */
+#era-antiguidade:checked ~ .era-grid .era-card:not([data-era="antiguidade"]) {
+  display: none;
+}
+
+/* quando "Medieval" está marcada, esconde os cards que NÃO são dela */
+#era-medieval:checked ~ .era-grid .era-card:not([data-era="medieval"]) {
+  display: none;
+}

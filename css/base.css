@@ -57,8 +57,13 @@ header nav a:hover,
 header nav a.atual {
   background-color: var(--marrom-medio); }
 
+/* o checkbox fica escondido; quem o clica é o label ☰ */
+.menu-check { display: none; }
+
 .menu-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -107,25 +112,31 @@ footer p { margin-bottom: 15px; font-size: 14px; }
 footer a { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 15px; }
 footer img { width: 20px; height: 20px; }
 
+/* Botão de voltar ao topo: é um link para "#", e o
+   scroll-behavior: smooth lá em cima deixa a subida suave */
 #back-to-top {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: var(--marrom-escuro);
   color: var(--creme);
   font-size: 20px;
+  text-decoration: none;
   cursor: pointer;
-  display: none;
 }
-#back-to-top.visible { display: block; }
+
 
 @media (max-width: 860px) {
-  .menu-toggle { display: block; }
+  .menu-toggle { display: flex; }
   header nav ul { display: none; flex-direction: column; border-radius: 20px; margin: 8px 0 0; }
-  header nav ul.aberto { display: flex; }
+  /* checkbox marcado = mostra a lista */
+  .menu-check:checked ~ ul { display: flex; }
 }
 
 @media (max-width: 600px) {

@@ -16,6 +16,9 @@
   <body>
     <header>
       <nav>
+        <!-- checkbox escondido: marcado = menu aberto -->
+        <input type="checkbox" id="menu-check" class="menu-check" />
+        <label for="menu-check" class="menu-toggle">☰</label>
         <ul>
           <li><a href="home.html">Inicial</a></li>
           <li><a href="conection.html">Conexão</a></li>
@@ -39,7 +42,10 @@
     </section>
     <main class="era-page">
       <section class="era-controls" data-timeline>
-        <button class="ativo" data-era="todos">Todas</button><button data-era="antiguidade">Antiguidade</button><button data-era="medieval">Medieval</button>
+        <input type="radio" name="era" id="era-todos" class="era-radio" checked />
+        <input type="radio" name="era" id="era-antiguidade" class="era-radio" />
+        <input type="radio" name="era" id="era-medieval" class="era-radio" />
+        <label for="era-todos">Todas</label><label for="era-antiguidade">Antiguidade</label><label for="era-medieval">Medieval</label>
         <div class="timeline"><span></span></div>
         <div class="era-grid">
           <article class="era-card" data-era="antiguidade">
@@ -216,9 +222,6 @@
         target="_blank"><img src="../src/instagram.svg" alt="" /> Instagram</a>
       <p>&copy; 2026 Mitologias e Religiões. Todos os direitos reservados.</p>
     </footer>
-    <button id="back-to-top" title="Voltar ao topo">
-      &uarr;
-    </button>
-    <script src="../js/script.js" defer></script>
+    <a id="back-to-top" href="#" title="Voltar ao topo">&uarr;</a>
   </body>
 </html>
