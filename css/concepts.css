@@ -1,5 +1,3 @@
-.banner { height: 400px; }
-
 .timeline-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,16 +18,16 @@
 
 .card:hover { transform: translateY(-5px); }
 .card h2 { font-size: 18px; margin-bottom: 10px; }
-.card p { font-size: 14px; line-height: 1.4; }
+.card p { font-size: 16px; line-height: 1.5; }
 
-.card-1 { background-color: #aa8171; }
+/* Cards claros usam texto escuro para garantir contraste */
+.card-1 { background-color: #aa8171; color: var(--marrom-escuro); }
 .card-2 { background-color: #6a4433; }
-.card-3 { background-color: #b5a098; }
+.card-3 { background-color: #b5a098; color: var(--marrom-escuro); }
 .card-4 { background-color: #42322d; }
 
 @media (max-width: 600px) {
-  .banner { height: 250px; }
   .timeline-container { gap: 15px; padding: 20px 0; }
   .card { padding: 12px; }
-  .card h2 { font-size: 15px; }
+  .card h2 { font-size: 18px; }
 }

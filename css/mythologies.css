@@ -16,7 +16,7 @@ main h2 { text-align: center; font-size: 30px; margin: 10px 0; }
 
 .greek-text { flex: 1; text-align: center; }
 .greek-text h3 { font-size: 22px; color: var(--marrom-medio); margin-bottom: 15px; }
-.greek-text p { font-size: 15px; line-height: 1.4; color: var(--creme); }
+.greek-text p { font-size: 17px; line-height: 1.4; color: var(--creme); }
 
 .gen { text-align: center; }
 .gen h3 { margin-top: 10px; }
@@ -36,11 +36,11 @@ main h2 { text-align: center; font-size: 30px; margin: 10px 0; }
 .grid-deuses li { text-align: center; }
 .grid-deuses img { width: 180px; height: 230px; object-fit: cover; border-radius: 6px; }
 .grid-deuses h5 { font-size: 19px; margin: 5px 0 2px; }
-.grid-deuses p { font-size: 15px; color: var(--marrom-medio); }
+.grid-deuses p { font-size: 17px; color: var(--marrom-medio); }
 
 .urano { text-align: center; margin: 15px auto; }
 .urano img { width: 140px; height: 180px; object-fit: cover; }
-.urano p { font-size: 15px; }
+.urano p { font-size: 17px; }
 
 .texto,
 .texto-amarelo {
@@ -79,8 +79,7 @@ main h2 { text-align: center; font-size: 30px; margin: 10px 0; }
 
 .overview { text-align: center; padding: 10px 30px; }
 .overview h2 { font-size: 28px; padding: 5px; }
-.overview p { max-width: 850px; margin: auto; font-size: 15px; line-height: 1.4; }
+.overview p { max-width: 850px; margin: auto; font-size: 17px; line-height: 1.4; }
 
 .linha-amarela { width: 100%; height: 2px; margin: 5px auto; background-color: var(--amarelo-linha); }
 
-.map-hero h1 { font-family: "Rye", Georgia, serif; font-size: 60px; margin: 16px 0 20px; }

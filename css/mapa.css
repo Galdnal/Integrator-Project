@@ -2,9 +2,9 @@
   padding: 120px 20px 70px;
   text-align: center;
   color: var(--creme);
-  background: linear-gradient(135deg, #5f321d, #43220f);
+  background: linear-gradient(135deg, #43220f, #74452b); /* padrão dos banners */
 }
-.map-hero span { font-size: 12px; letter-spacing: 4px; color: var(--ouro); }
+.map-hero span { font-size: 14px; letter-spacing: 4px; color: var(--ouro); }
 .map-hero h1 { font-family: "Rye", Georgia, serif; font-size: 60px; margin: 14px 0; }
 .map-hero p { max-width: 650px; margin: 0 auto; line-height: 1.7; }
 
@@ -71,7 +71,7 @@
 
 .map-info { padding: 30px; text-align: center; }
 .map-symbol { display: block; font-size: 50px; margin-bottom: 10px; }
-.map-kicker { font-size: 12px; letter-spacing: 3px; color: var(--marrom-texto-claro); }
+.map-kicker { font-size: 14px; letter-spacing: 3px; color: var(--marrom-texto-claro); }
 .map-info h2 { font-size: 30px; margin: 10px 0; }
 .map-info p { line-height: 1.6; margin-bottom: 20px; }
 
@@ -84,7 +84,7 @@
 }
 .map-cta:hover { background-color: var(--marrom-medio); }
 
-.map-legend { margin-top: 15px; text-align: center; font-size: 14px; }
+.map-legend { margin-top: 15px; text-align: center; font-size: 16px; }
 
 @media (max-width: 900px) {
   .map-layout { grid-template-columns: 1fr; }

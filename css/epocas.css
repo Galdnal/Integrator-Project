@@ -2,9 +2,9 @@
   padding: 120px 20px 75px;
   text-align: center;
   color: var(--creme);
-  background: linear-gradient(135deg, #43220f, #74452b);
+  background: linear-gradient(135deg, #43220f, #74452b); /* padrão dos banners */
 }
-.era-hero span { font-size: 12px; letter-spacing: 4px; color: var(--ouro); }
+.era-hero span { font-size: 14px; letter-spacing: 4px; color: var(--ouro); }
 .era-hero h1 { font-family: "Rye", Georgia, serif; font-size: 60px; margin: 14px 0; }
 .era-hero p { max-width: 700px; margin: 0 auto; line-height: 1.7; }
 

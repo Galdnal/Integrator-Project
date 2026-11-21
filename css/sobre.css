@@ -1,0 +1,24 @@
+/* Área reservada para o texto da proposta de trabalho */
+.proposta-conteudo {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--creme);
+  color: var(--marrom-escuro);
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.proposta-conteudo h2 {
+  font-family: "Rye", Georgia, serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .proposta-conteudo { padding: 24px; font-size: 16px; }
+  .proposta-conteudo h2 { font-size: 26px; }
+}
