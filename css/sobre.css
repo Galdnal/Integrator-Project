@@ -19,6 +19,10 @@
   margin-bottom: 20px;
 }
 
+.proposta-conteudo p {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 600px) {
   .proposta-conteudo { padding: 24px; font-size: 16px; }
   .proposta-conteudo h2 { font-size: 26px; }
