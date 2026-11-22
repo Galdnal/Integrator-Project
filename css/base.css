@@ -123,6 +123,10 @@ footer img { width: 20px; height: 20px; }
 @media (max-width: 860px) {
   .menu-toggle { display: flex; }
   header nav ul { display: none; flex-direction: column; border-radius: 20px; margin: 8px 0 0; }
+  
+  .banner h1 {
+    font-size: 40px;
+  }
   /* checkbox marcado = mostra a lista */
   .menu-check:checked ~ ul { display: flex; }
 }
