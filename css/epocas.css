@@ -42,8 +42,7 @@
 .era-card p { line-height: 1.5; margin-bottom: 8px; }
 .era-card small { color: var(--marrom-texto); }
 
-/* ---- Filtro por época sem JavaScript ----
-   Mesma ideia do mapa: radio escondido + label no lugar do botão. */
+/* ---- Filtro por época sem JavaScript ---- */
 
 .era-radio { display: none; }
 

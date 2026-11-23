@@ -77,7 +77,6 @@ header nav a.atual {
   padding: 120px 20px 70px;
   text-align: center;
   color: var(--creme);
-  /* Mesmo padrão visual dos cabeçalhos de Mapa e Épocas */
   background: linear-gradient(135deg, #43220f, #74452b);
 }
 
